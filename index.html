@@ -4,9 +4,10 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>EXPLORE INDONESIA</title>
+    <link rel="stylesheet" href="./css/main.css" />
   </head>
   <body>
-    <header>
+    <header class="header">
       <nav>
         <a href="#">
           <img src="./assets/images/Logo_EI.png" alt="logo explore indonesia" />
@@ -39,7 +40,11 @@
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
           </li>
         </ul>
-        <video src="./assets/video/video_indonesia.mp4"></video>
+        <video controls autoplay muted>
+          <source src="./assets/video/video_indonesia.mp4" />
+          <source src="./assets/video/video_indonesia.webm" />
+          Your browser does not support video
+        </video>
       </section>
     </main>
   </body>

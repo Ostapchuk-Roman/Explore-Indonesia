@@ -1,0 +1,8 @@
+//стилізація тексту за висотою, відступом, кольором
+@use './variables';
+
+@mixin text-style($font-size: 0, $line-height: 0, $color: $secondary-lighter-color) {
+  font-size: $font-size;
+  line-height: $line-height;
+  color: $color;
+}

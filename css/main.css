@@ -1,1 +1,84 @@
-/*# sourceMappingURL=main.css.map */
+@charset "UTF-8";
+/* Basic Reset */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 100%; /* Для коректної роботи rem */
+  line-height: 1.5;
+  -webkit-text-size-adjust: 100%; /* Відключення масштабування тексту в мобільних браузерах */
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif; /* Або інший базовий шрифт */
+  background-color: #fff;
+  color: #000;
+}
+
+img,
+picture,
+video,
+canvas {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+button,
+input,
+textarea,
+select {
+  font: inherit;
+  border: none;
+  background: none;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+ul,
+ol {
+  list-style: none;
+}
+
+@font-face {
+  font-family: "Roboto";
+  src: url(../../fonts/Roboto-Bold.woff2) format("woff2"), url(../../fonts/Roboto-Bold.woff) format("woff"), url(../../fonts/Roboto-Bold.ttf) format("truetype");
+  font-weight: bold;
+  font-style: normal;
+}
+@font-face {
+  font-family: "DM Sans";
+  src: url(../../fonts/DMSans-Bold.woff2) format("woff2"), url(../../fonts/DMSans-Bold.woff) format("woff"), url(../../fonts/DMSans-Bold.ttf) format("truetype");
+  font-weight: bold;
+  font-style: normal;
+}
+@font-face {
+  font-family: "DM Sans";
+  src: url(../../fonts/DMSans-Medium.woff2) format("woff2"), url(../../fonts/DMSans-Medium.woff) format("woff"), url(../../fonts/DMSans-Medium.ttf) format("truetype");
+  font-weight: 500;
+  font-style: normal;
+}
+@font-face {
+  font-family: "DM Sans";
+  src: url(../../fonts/DMSans-regular.woff2) format("woff2"), url(../../fonts/DMSans-regular.woff) format("woff"), url(../../fonts/DMSans-regular.ttf) format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+body {
+  width: 1980px;
+}
+
+h1 {
+  font-size: 120px;
+  line-height: 1.08;
+  color: #ffffff;
+}/*# sourceMappingURL=main.css.map */

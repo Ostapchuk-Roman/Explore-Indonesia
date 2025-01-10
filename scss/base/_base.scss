@@ -1,0 +1,9 @@
+@import '../utils/variables';
+@import '../utils/mixin';
+body {
+  width: 1980px;
+}
+
+h1 {
+  @include text-style($fs-d-h1, 1.08, $primary-lighter-color);
+}
