@@ -8,24 +8,33 @@
   </head>
   <body>
     <header class="header">
-      <nav>
-        <a href="#">
-          <img src="./assets/images/Logo_EI.png" alt="logo explore indonesia" />
-        </a>
-        <ul>
-          <li><a href="#">destinations</a></li>
-          <li><a href="#">experiences</a></li>
-          <li><a href="#">about</a></li>
-          <li><a href="#">gallery</a></li>
-        </ul>
-      </nav>
+      <div class="header__container">
+        <nav class="header__nav">
+          <a class="header__logo" href="#">
+            <img src="./assets/images/Logo_EI.png" alt="logo explore indonesia" />
+          </a>
+          <ul class="header__menu">
+            <li class="header__menu-item"><a href="#">destinations</a></li>
+            <li class="header__menu-item"><a href="#">experiences</a></li>
+            <li class="header__menu-item"><a href="#">about</a></li>
+            <li class="header__menu-item"><a href="#">gallery</a></li>
+          </ul>
+        </nav>
+        <div class="header__container bar">
+          <button>
+            <svg class="header__button--search" width="24px" height="24px">
+              <use href="./assets/icons/symbol-defs.svg#icon-search-1"></use>
+            </svg>
+          </button>
+        </div>
+      </div>
     </header>
     <main>
-      <section>
-        <h1>explore indonesia</h1>
+      <section class="hero-section">
+        <h1 class="hero-section__title">explore indonesia</h1>
         <button type="button">Start travelling</button>
       </section>
-      <section>
+      <section class="stip-section">
         <ul>
           <li>
             <h2>Title here</h2>

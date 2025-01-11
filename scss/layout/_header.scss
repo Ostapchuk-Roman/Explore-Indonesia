@@ -1,0 +1,36 @@
+@import '../utils/variables';
+.header {
+  &__container {
+    display: flex;
+    gap: 844px;
+  }
+
+  &__nav {
+    display: flex;
+  }
+
+  &__logo img {
+    width: 186px;
+    height: 68px;
+    margin: 24px 0 0 24px;
+  }
+
+  &__menu {
+    display: flex;
+    padding-left: 64px;
+    gap: 62px;
+    justify-content: center;
+    align-items: center;
+
+    &-item {
+      text-transform: uppercase;
+      font-weight: 700;
+    }
+  }
+
+  &__button {
+    &--search use {
+      fill: $primary-lighter-color;
+    }
+  }
+}

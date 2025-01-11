@@ -74,11 +74,50 @@ ol {
   font-style: normal;
 }
 body {
-  width: 1980px;
+  max-width: 1920px;
+  margin: auto;
+  background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.31), rgba(0, 0, 0, 0.29)), url(../../assets/images/backround_header.jpg);
+  background-repeat: no-repeat;
+  background-position: center, top;
+  background-size: cover;
 }
 
 h1 {
   font-size: 120px;
   line-height: 1.08;
   color: #ffffff;
+  text-transform: uppercase;
+}
+
+a {
+  font-size: 18px;
+  align-items: 1.55;
+  color: #ffffff;
+}
+
+.header__container {
+  display: flex;
+  gap: 844px;
+}
+.header__nav {
+  display: flex;
+}
+.header__logo img {
+  width: 186px;
+  height: 68px;
+  margin: 24px 0 0 24px;
+}
+.header__menu {
+  display: flex;
+  padding-left: 64px;
+  gap: 62px;
+  justify-content: center;
+  align-items: center;
+}
+.header__menu-item {
+  text-transform: uppercase;
+  font-weight: 700;
+}
+.header__button--search use {
+  fill: #ffffff;
 }/*# sourceMappingURL=main.css.map */
