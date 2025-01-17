@@ -3,5 +3,7 @@
 @use './base/found';
 @use './utils/mixin';
 @use './base/base';
+@use './components/button';
 @use './layout/header.scss';
 @use './layout/hero-section.scss';
+@use './layout/stip-section.scss';

@@ -74,25 +74,50 @@ ol {
   font-style: normal;
 }
 body {
+  font-family: "DM Sans";
+  width: 100%;
   max-width: 1920px;
   margin: auto;
   background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.31), rgba(0, 0, 0, 0.29)), url(../../assets/images/backround_header.jpg);
   background-repeat: no-repeat;
   background-position: center, top;
-  background-size: cover;
+  background-size: 1920px;
 }
 
 h1 {
+  font-family: "roboto";
   font-size: 120px;
   line-height: 1.08;
   color: #ffffff;
   text-transform: uppercase;
 }
 
+h2 {
+  font-size: 60px;
+  line-height: 2.5;
+  color: #ffffff;
+}
+
 a {
   font-size: 18px;
   align-items: 1.55;
   color: #ffffff;
+}
+
+p {
+  font-size: 18px;
+  line-height: 1.55;
+  color: #6f7787;
+}
+
+.button {
+  font-weight: 700;
+  padding: 26px 64px;
+  border-radius: 211px;
+  background-color: #dd2242;
+  font-size: 20px;
+  line-height: 1.5;
+  color: rgba(255, 255, 255, 0.8);
 }
 
 .header__container {
@@ -102,7 +127,7 @@ a {
 .header__nav {
   display: flex;
 }
-.header__logo img {
+.header__logo {
   width: 186px;
   height: 68px;
   margin: 24px 0 0 24px;
@@ -120,4 +145,53 @@ a {
 }
 .header__button--search use {
   fill: #ffffff;
+}
+
+.hero-section__title {
+  margin: 196px 0 21px 278px;
+}
+.hero-section__button {
+  margin: 0 0 220px 278px;
+}
+
+.stip-section {
+  position: relative;
+  display: flex;
+}
+.stip-section__list {
+  justify-content: space-around;
+  align-items: center;
+  width: 1226px;
+  height: 210px;
+  margin-right: 418px;
+  gap: 40px;
+  padding: 40px;
+  font-family: "roboto";
+  display: flex;
+  list-style-position: inside;
+  margin-left: auto;
+  background-color: rgba(0, 0, 0, 0.6);
+  font-size: 16px;
+  line-height: 1.17;
+  color: #dd2242;
+  list-style-type: decimal-leading-zero;
+}
+.stip-section__list p {
+  font-weight: 400;
+  max-width: 210px;
+}
+.stip-section__title {
+  margin-top: 16px;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 1.7;
+  color: #ffffff;
+}
+.stip-section__video-container {
+  display: block;
+  position: absolute;
+  right: 0;
+  bottom: 0px;
+  width: 100%;
+  max-width: 418px;
 }/*# sourceMappingURL=main.css.map */

@@ -1,22 +1,33 @@
 @import '../utils/variables';
 @import '../utils/mixin';
 body {
+  font-family: 'DM Sans';
+  width: 100%;
   max-width: 1920px;
   margin: auto;
   background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.31), rgba(0, 0, 0, 0.29)),
     url(../../assets/images/backround_header.jpg);
   background-repeat: no-repeat;
   background-position: center, top;
-  background-size: cover;
+  background-size: 1920px;
 }
 
 h1 {
+  font-family: 'roboto';
   @include text-style($fs-d-h1, 1.08, $primary-lighter-color);
   text-transform: uppercase;
+}
+
+h2 {
+  @include text-style($fs-d-h2, 2.5, $primary-lighter-color);
 }
 
 a {
   font-size: 18px;
   align-items: 1.55;
   color: $primary-lighter-color;
+}
+
+p {
+  @include text-style($fs-p, 1.55, $secondary-darker-color);
 }

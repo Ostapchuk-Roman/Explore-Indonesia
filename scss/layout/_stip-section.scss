@@ -1,0 +1,53 @@
+@import '../utils/variables';
+@import '../utils/mixin';
+
+.stip-section {
+  position: relative;
+  display: flex;
+
+  &__list {
+    justify-content: space-around;
+    align-items: center;
+    width: 1226px;
+    height: 210px;
+    margin-right: 418px;
+    gap: 40px;
+    padding: 40px;
+    font-family: 'roboto';
+    display: flex;
+    list-style-position: inside;
+    margin-left: auto;
+    background-color: rgba(0, 0, 0, 0.6);
+    @include text-style($fs-d-p, 1.17, $accent-color);
+    list-style-type: decimal-leading-zero;
+    // padding: 40px 0 0 72px;
+  }
+
+  &__list p {
+    font-weight: 400;
+    max-width: 210px;
+    // margin: 0 198px 50px 0;
+  }
+
+  &__title {
+    margin-top: 16px;
+
+    font-weight: 700;
+    @include text-style(24px, 1.7, $primary-lighter-color);
+  }
+
+  &__video-container {
+    display: block;
+    position: absolute;
+    right: 0;
+    bottom: 0px;
+    width: 100%;
+    max-width: 418px;
+  }
+
+  &__video {
+    // position: absolute;
+    // right: -30px;
+    // bottom: 0px;
+  }
+}
