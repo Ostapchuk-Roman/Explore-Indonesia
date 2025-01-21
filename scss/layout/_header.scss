@@ -2,7 +2,8 @@
 .header {
   &__container {
     display: flex;
-    gap: 844px;
+    justify-content: space-between;
+    align-items: center;
   }
 
   &__nav {
@@ -10,17 +11,35 @@
   }
 
   &__logo {
-    width: 186px;
-    height: 68px;
-    margin: 24px 0 0 24px;
+    // width: 186px;
+    margin: 12px 0 0 24px;
+
+    // @media screen and (max-width: $mw-desctop-d) {
+    //   width: 108px;
+    //   margin: 12px 0 0 12px;
+    // }
+
+    @media screen and (max-width: $mw-tablet-d) {
+      width: 216px;
+      margin: 24px 0 0 14px;
+    }
   }
 
   &__menu {
     display: flex;
     padding-left: 64px;
     gap: 62px;
-    justify-content: center;
+    justify-content: space-around;
     align-items: center;
+
+    @media screen and (max-width: $mw-desctop-d) {
+      gap: 20px;
+      padding-left: 32px;
+    }
+
+    @media screen and (max-width: $mw-tablet-d) {
+      display: none;
+    }
 
     &-item {
       text-transform: uppercase;
@@ -28,9 +47,59 @@
     }
   }
 
-  &__button {
-    &--search use {
+  // &__container-search {
+  //   position: relative;
+  //   margin: 36px 60px 0 auto;
+
+  //   @media screen and (max-width: $mw-desctop-d) {
+  //     margin: 16px 16px 0 auto;
+  //   }
+  //   @media screen and (max-width: $mw-tablet-d) {
+  //     margin: 44px 64px 0 auto;
+  //   }
+  // }
+
+  // &__search-input {
+  //   display: block;
+  //   opacity: 0;
+  //   position: absolute;
+  //   width: 300px;
+  //   top: -8px;
+  //   right: 40px;
+  //   padding: 4px 10px;
+  //   background-color: antiquewhite;
+  //   border: 1px solid #ccc;
+  //   border-radius: 20px;
+  //   transform: translate;
+  //   transition: opacity 1s ease;
+
+  //   @media screen and (max-width: $mw-desctop-d) {
+  //     width: 130px;
+  //   }
+
+  //   @media screen and (max-width: $mw-tablet-d) {
+  //     width: 130px;
+  //     top: -10px;
+  //   }
+  // }
+
+  // &__button-search {
+  //   cursor: pointer;
+  //   &--icon use {
+  //     fill: $primary-lighter-color;
+  //   }
+  // }
+  // &__container-search:hover &__search-input {
+  //   display: block;
+  //   opacity: 1;
+  // }
+
+  &__container-bar {
+    display: none;
+    @media screen and (max-width: $mw-tablet-d) {
+      display: block;
       fill: $primary-lighter-color;
+      margin: 24px 32px 0 0;
     }
   }
 }

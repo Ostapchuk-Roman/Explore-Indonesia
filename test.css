@@ -1,0 +1,27 @@
+body {
+  background-color: rgb(108, 98, 98);
+}
+
+.search-container {
+  position: relative;
+}
+
+.search-input {
+  display: none; /* Спочатку приховано */
+  position: absolute;
+  top: 0;
+  left: 100%;
+  padding: 5px;
+  border: 1px solid #ccc;
+}
+
+.search-icon {
+  cursor: pointer;
+  background: none;
+  border: none;
+  font-size: 20px;
+}
+
+.search-container:hover .search-input {
+  display: block; /* Показати поле вводу при наведенні */
+}

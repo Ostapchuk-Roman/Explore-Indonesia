@@ -1,9 +1,33 @@
+@import '../utils/variables';
+@import '../utils/mixin';
+
 .hero-section {
   &__title {
     margin: 196px 0 21px 278px;
+    max-width: 768px;
+
+    @media screen and (max-width: $mw-desctop-d) {
+      margin: 160px auto 60px auto;
+      max-width: 585px;
+    }
+
+    @media screen and (max-width: $mw-tablet-d) {
+      margin: 196px 0 21px 24px;
+      max-width: 585px;
+    }
   }
 
   &__button {
     margin: 0 0 220px 278px;
+
+    @media screen and (max-width: $mw-desctop-d) {
+      margin: 0 auto 140px auto;
+      display: block;
+    }
+
+    @media screen and (max-width: $mw-tablet-d) {
+      margin: 0 auto 128px auto;
+      display: block;
+    }
   }
 }

@@ -10,24 +10,46 @@ body {
   background-repeat: no-repeat;
   background-position: center, top;
   background-size: 1920px;
+
+  @media screen and (max-width: $mw-desctop-d) {
+    background-size: $mw-desctop-d;
+  }
 }
 
 h1 {
   font-family: 'roboto';
   @include text-style($fs-d-h1, 1.08, $primary-lighter-color);
   text-transform: uppercase;
+
+  @media screen and (max-width: $mw-desctop-d) {
+    @include text-style($fs-t-h1, 1.08, $primary-lighter-color);
+  }
+
+  @media screen and (max-width: $mw-tablet-d) {
+    @include text-style($fs-t-h1, 1.08, $primary-lighter-color);
+  }
 }
 
 h2 {
   @include text-style($fs-d-h2, 2.5, $primary-lighter-color);
+
+  @media screen and (max-width: $mw-desctop-d) {
+    @include text-style($fs-t-h2, 1.08, $primary-lighter-color);
+  }
 }
 
 a {
-  font-size: 18px;
-  align-items: 1.55;
-  color: $primary-lighter-color;
+  @include text-style($fs-p, 1.55, $primary-lighter-color);
+
+  @media screen and (max-width: $mw-desctop-d) {
+    @include text-style($fs-d-p, 1, $primary-lighter-color);
+  }
 }
 
 p {
   @include text-style($fs-p, 1.55, $secondary-darker-color);
+
+  @media screen and (max-width: $mw-desctop-d) {
+    @include text-style($fs-d-p, 1.24, $secondary-darker-color);
+  }
 }
