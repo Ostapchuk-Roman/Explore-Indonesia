@@ -7,13 +7,14 @@
     max-width: 768px;
 
     @media screen and (max-width: $mw-desctop-d) {
-      margin: 160px auto 60px auto;
-      max-width: 585px;
+      margin: 160px auto 60px;
+      max-width: max-content;
     }
 
     @media screen and (max-width: $mw-tablet-d) {
-      margin: 196px 0 21px 24px;
-      max-width: 585px;
+      margin: 42px auto 28px;
+      padding: 0 30px;
+      text-align: center;
     }
   }
 
@@ -21,13 +22,16 @@
     margin: 0 0 220px 278px;
 
     @media screen and (max-width: $mw-desctop-d) {
-      margin: 0 auto 140px auto;
+      margin: 0 auto 150px;
       display: block;
     }
 
     @media screen and (max-width: $mw-tablet-d) {
-      margin: 0 auto 128px auto;
+      margin: 0 auto 54px;
       display: block;
+      width: 80%;
+      height: 60px;
+      max-width: 260px;
     }
   }
 }

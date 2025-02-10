@@ -85,7 +85,12 @@ body {
 }
 @media screen and (max-width: 1280px) {
   body {
-    background-size: 1280px;
+    background-size: cover;
+  }
+}
+@media screen and (max-width: 768px) {
+  body {
+    background-size: cover;
   }
 }
 
@@ -98,14 +103,21 @@ h1 {
 }
 @media screen and (max-width: 1280px) {
   h1 {
-    font-size: 60px;
+    font-size: 58px;
     line-height: 1.08;
     color: #ffffff;
   }
 }
 @media screen and (max-width: 768px) {
   h1 {
-    font-size: 60px;
+    font-size: 58px;
+    line-height: 1.08;
+    color: #ffffff;
+  }
+}
+@media screen and (max-width: 360px) {
+  h1 {
+    font-size: 40px;
     line-height: 1.08;
     color: #ffffff;
   }
@@ -122,6 +134,32 @@ h2 {
     line-height: 1.08;
     color: #ffffff;
   }
+}
+
+h3 {
+  font-size: 42px;
+  line-height: 1.19;
+  color: #ffffff;
+}
+@media screen and (max-width: 1280px) {
+  h3 {
+    font-size: 32px;
+    line-height: 1.08;
+    color: #ffffff;
+  }
+}
+@media screen and (max-width: 768px) {
+  h3 {
+    font-size: 40px;
+    line-height: 1.08;
+    color: #ffffff;
+  }
+}
+
+h4 {
+  font-size: 40px;
+  line-height: 1.16;
+  color: #dd2242;
 }
 
 a {
@@ -179,8 +217,8 @@ p {
 }
 @media screen and (max-width: 768px) {
   .header__logo {
-    width: 216px;
-    margin: 24px 0 0 14px;
+    width: 148px;
+    margin: 48px 0 0 24px;
   }
 }
 .header__menu {
@@ -212,7 +250,7 @@ p {
   .header__container-bar {
     display: block;
     fill: #ffffff;
-    margin: 24px 32px 0 0;
+    margin: 56px 31px 0 0;
   }
 }
 
@@ -222,14 +260,15 @@ p {
 }
 @media screen and (max-width: 1280px) {
   .hero-section__title {
-    margin: 160px auto 60px auto;
-    max-width: 585px;
+    margin: 160px auto 60px;
+    max-width: max-content;
   }
 }
 @media screen and (max-width: 768px) {
   .hero-section__title {
-    margin: 196px 0 21px 24px;
-    max-width: 585px;
+    margin: 42px auto 28px;
+    padding: 0 30px;
+    text-align: center;
   }
 }
 .hero-section__button {
@@ -237,20 +276,29 @@ p {
 }
 @media screen and (max-width: 1280px) {
   .hero-section__button {
-    margin: 0 auto 140px auto;
+    margin: 0 auto 150px;
     display: block;
   }
 }
 @media screen and (max-width: 768px) {
   .hero-section__button {
-    margin: 0 auto 128px auto;
+    margin: 0 auto 54px;
     display: block;
+    width: 80%;
+    height: 60px;
+    max-width: 260px;
   }
 }
 
 .stip-section {
   position: relative;
   display: flex;
+}
+@media screen and (max-width: 768px) {
+  .stip-section {
+    position: static;
+    display: block;
+  }
 }
 .stip-section__list {
   justify-content: space-around;
@@ -278,8 +326,24 @@ p {
     margin-right: 328px;
   }
 }
+@media screen and (max-width: 768px) {
+  .stip-section__list {
+    position: static;
+    display: block;
+    width: 85%;
+    height: max-content;
+    margin: 0 auto;
+    padding: 32px;
+  }
+}
 .stip-section__list p {
   max-width: 210px;
+}
+@media screen and (max-width: 768px) {
+  .stip-section__list p {
+    max-width: max-content;
+    padding-bottom: 32px;
+  }
 }
 .stip-section__title {
   margin-top: 16px;
@@ -295,6 +359,14 @@ p {
     color: #ffffff;
   }
 }
+@media screen and (max-width: 768px) {
+  .stip-section__title {
+    margin-top: 4px;
+    font-size: 26px;
+    line-height: 1.57;
+    color: #ffffff;
+  }
+}
 .stip-section__video-container {
   display: block;
   position: absolute;
@@ -306,4 +378,268 @@ p {
   .stip-section__video-container {
     max-width: 328px;
   }
+}
+@media screen and (max-width: 768px) {
+  .stip-section__video-container {
+    max-width: 85%;
+    position: relative;
+    margin: 0 auto;
+  }
+}
+
+.walkways-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: linear-gradient(to top, rgb(1, 10, 32), rgba(1, 10, 32, 0.8)), url(../../assets/images/walkways_indonesia_background.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 100%;
+}
+@media screen and (max-width: 1280px) {
+  .walkways-section {
+    background-size: cover;
+  }
+}
+@media screen and (max-width: 768px) {
+  .walkways-section {
+    height: auto;
+    flex-direction: column;
+    padding: 40px 32px 56px;
+  }
+}
+.walkways-section__wrapper-img {
+  display: flex;
+}
+.walkways-section__photo {
+  width: 90%;
+  height: auto;
+  margin: 208px 0 108px auto;
+  border-radius: 12px;
+}
+@media screen and (max-width: 1280px) {
+  .walkways-section__photo {
+    margin: 108px 0 108px auto;
+  }
+}
+@media screen and (max-width: 768px) {
+  .walkways-section__photo {
+    width: 100%;
+    max-width: 768px;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+  }
+}
+.walkways-section__wrapper {
+  width: 50%;
+  margin: 265px 32px auto 130px;
+  max-width: 480px;
+}
+@media screen and (max-width: 1280px) {
+  .walkways-section__wrapper {
+    margin: auto 32px auto 42px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .walkways-section__wrapper {
+    margin: 42px auto 0 0;
+    width: 100%;
+  }
+}
+.walkways-section__wrapper p {
+  margin-top: 24px;
+}
+@media screen and (max-width: 1280px) {
+  .walkways-section__wrapper p {
+    margin-top: 20px;
+  }
+}
+.walkways-section__title {
+  font-weight: 700;
+}
+.walkways-section__button {
+  margin-top: 32px;
+  padding: 16px 40px;
+  font-size: 18px;
+}
+@media screen and (max-width: 1280px) {
+  .walkways-section__button {
+    margin-top: 20px;
+    padding: 12px 36px;
+  }
+}
+@media screen and (max-width: 360px) {
+  .walkways-section__button {
+    max-width: 280px;
+    width: 100%;
+  }
+}
+
+.beaches-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: linear-gradient(to bottom, rgb(1, 10, 32), rgba(1, 10, 32, 0.8)), url(../../assets/images/beaches_indonesia_background.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 100%;
+}
+@media screen and (max-width: 1280px) {
+  .beaches-section {
+    background-size: cover;
+  }
+}
+@media screen and (max-width: 768px) {
+  .beaches-section {
+    height: auto;
+    flex-direction: column;
+    padding: 0 32px 44px;
+  }
+}
+.beaches-section__wrapper-img {
+  display: flex;
+}
+@media screen and (max-width: 768px) {
+  .beaches-section__wrapper-img {
+    order: -1;
+  }
+}
+.beaches-section__photo {
+  width: 90%;
+  height: auto;
+  margin: 108px auto 208px 0;
+  border-radius: 12px;
+}
+@media screen and (max-width: 1280px) {
+  .beaches-section__photo {
+    margin: 108px auto 108px 0;
+  }
+}
+@media screen and (max-width: 768px) {
+  .beaches-section__photo {
+    width: 100%;
+    max-width: 768px;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+  }
+}
+.beaches-section__wrapper {
+  width: 50%;
+  margin: 168px 130px auto 32px;
+  max-width: 480px;
+}
+@media screen and (max-width: 1280px) {
+  .beaches-section__wrapper {
+    margin: auto 32px auto 42px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .beaches-section__wrapper {
+    margin: 42px auto 0 0;
+    width: 100%;
+    order: 1;
+  }
+}
+.beaches-section__wrapper p {
+  margin-top: 24px;
+}
+@media screen and (max-width: 1280px) {
+  .beaches-section__wrapper p {
+    margin-top: 20px;
+  }
+}
+.beaches-section__title {
+  font-weight: 700;
+}
+.beaches-section__button {
+  margin-top: 32px;
+  padding: 16px 40px;
+  font-size: 18px;
+}
+@media screen and (max-width: 1280px) {
+  .beaches-section__button {
+    margin-top: 20px;
+    padding: 12px 36px;
+  }
+}
+@media screen and (max-width: 360px) {
+  .beaches-section__button {
+    max-width: 280px;
+    width: 100%;
+  }
+}
+
+.secrets-section {
+  background-image: url(../../assets/images/secrets_background.jpg);
+  background-position: center;
+  background-size: 110%;
+}
+.secrets-section__title {
+  display: flex;
+  padding-top: 127px;
+  justify-content: center;
+  align-items: center;
+  font-size: 60px;
+  line-height: 1.5;
+  color: #010a20;
+}
+.secrets-section__button-bar--icon {
+  margin: 64px;
+  fill: #010a20;
+}
+.secrets-section__carousel {
+  margin-top: 44px;
+  margin-bottom: 933px;
+  display: flex;
+  justify-content: center;
+}
+.secrets-section__carousel-card {
+  display: flex;
+  gap: 32px;
+}
+.secrets-section__carousel-card img {
+  border-radius: 12px;
+}
+.secrets-section__statistics {
+  background-color: rgba(2, 12, 33, 0.9);
+}
+.secrets-section__statistics__title {
+  display: flex;
+  justify-content: center;
+}
+.secrets-section__statistics--title h3 {
+  display: flex;
+  justify-content: center;
+  padding-top: 202px;
+  font-size: 60px;
+  line-height: 1.5;
+  color: #ffffff;
+}
+.secrets-section__statistics--title p {
+  margin: 0 auto;
+  text-align: center;
+  margin-top: 38px;
+  max-width: 484px;
+  color: #e0e0e0;
+}
+.secrets-section__statistics--wrapper {
+  display: flex;
+  justify-content: space-around;
+}
+.secrets-section__statistics--accent {
+  width: 380px;
+}
+.secrets-section__statistics--accent h4 {
+  margin: 39px auto 0 auto;
+  text-align: center;
+}
+.secrets-section__statistics--accent p {
+  margin: 18px auto 224px auto;
+  text-align: center;
+}
+
+.next {
+  transform: rotateY(180deg);
 }/*# sourceMappingURL=main.css.map */

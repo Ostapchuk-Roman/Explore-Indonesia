@@ -5,6 +5,11 @@
   position: relative;
   display: flex;
 
+  @media screen and (max-width: $mw-tablet-d) {
+    position: static;
+    display: block;
+  }
+
   &__list {
     justify-content: space-around;
     align-items: center;
@@ -27,10 +32,23 @@
       padding: 22px;
       margin-right: 328px;
     }
+
+    @media screen and (max-width: $mw-tablet-d) {
+      position: static;
+      display: block;
+      width: 85%;
+      height: max-content;
+      margin: 0 auto;
+      padding: 32px;
+    }
   }
 
   &__list p {
     max-width: 210px;
+    @media screen and (max-width: $mw-tablet-d) {
+      max-width: max-content;
+      padding-bottom: 32px;
+    }
   }
 
   &__title {
@@ -40,6 +58,11 @@
     @media screen and (max-width: $mw-desctop-d) {
       margin-top: 8px;
       @include text-style($fs-t-h2, 1, $primary-lighter-color);
+    }
+
+    @media screen and (max-width: $mw-tablet-d) {
+      margin-top: 4px;
+      @include text-style(26px, 1.57, $primary-lighter-color);
     }
   }
 
@@ -53,6 +76,11 @@
 
     @media screen and (max-width: $mw-desctop-d) {
       max-width: 328px;
+    }
+    @media screen and (max-width: $mw-tablet-d) {
+      max-width: 85%;
+      position: relative;
+      margin: 0 auto;
     }
   }
 }

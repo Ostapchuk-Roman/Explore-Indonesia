@@ -12,7 +12,11 @@ body {
   background-size: 1920px;
 
   @media screen and (max-width: $mw-desctop-d) {
-    background-size: $mw-desctop-d;
+    background-size: cover;
+  }
+
+  @media screen and (max-width: $mw-tablet-d) {
+    background-size: cover;
   }
 }
 
@@ -28,6 +32,10 @@ h1 {
   @media screen and (max-width: $mw-tablet-d) {
     @include text-style($fs-t-h1, 1.08, $primary-lighter-color);
   }
+
+  @media screen and (max-width: $mw-mobil-d) {
+    @include text-style($fs-m-h1, 1.08, $primary-lighter-color);
+  }
 }
 
 h2 {
@@ -36,6 +44,22 @@ h2 {
   @media screen and (max-width: $mw-desctop-d) {
     @include text-style($fs-t-h2, 1.08, $primary-lighter-color);
   }
+}
+
+h3 {
+  @include text-style($fs-d-h3, 1.19, $primary-lighter-color);
+
+  @media screen and (max-width: $mw-desctop-d) {
+    @include text-style($fs-t-h3, 1.08, $primary-lighter-color);
+  }
+
+  @media screen and (max-width: $mw-tablet-d) {
+    @include text-style($fs-m-h3, 1.08, $primary-lighter-color);
+  }
+}
+
+h4 {
+  @include text-style($fs-m-h3, 1.16, $accent-color);
 }
 
 a {
