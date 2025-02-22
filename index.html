@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>EXPLORE INDONESIA</title>
     <link rel="stylesheet" href="./css/main.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
   </head>
   <body>
     <header class="header">
@@ -87,23 +89,33 @@
       </section>
       <section class="secrets-section">
         <h2 class="secrets-section__title">Explore Our Secrets</h2>
-        <div class="secrets-section__carousel">
-          <button type="button" class="secrets-section__carousel-button prev">
-            <svg class="secrets-section__button-bar--icon" width="24px" height="16px">
-              <use href="./assets/icons/symbol-defs.svg#icon-Union-1"></use>
-            </svg>
-          </button>
-          <div class="secrets-section__carousel-card">
-            <img src="./assets/images/cor_1.jpg" alt="mountain on the background of the sunset" />
-            <img src="./assets/images/cor_2.jpg" alt="happy children on the lawn" />
-            <img src="./assets/images/cor_3.jpg" alt="rice fields" />
+        <div class="secrets-section__wrapper--swiper">
+          <div class="secrets-section__button secrets-section__button--wrapper-prev">
+            <button type="button">
+              <svg class="secrets-section__button-prev" width="24px" height="24px">
+                <use href="./assets/icons/symbol-defs.svg#icon-Union-1"></use>
+              </svg>
+            </button>
           </div>
-          <button type="button" class="secrets-section__carousel-button next">
-            <svg class="secrets-section__button-bar--icon" width="24px" height="16px">
-              <use href="./assets/icons/symbol-defs.svg#icon-Union-1"></use>
-            </svg>
-          </button>
+          <div class="swiper">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide"><img src="./assets/images/cor_1.jpg" alt="photo indonesia" /></div>
+              <div class="swiper-slide"><img src="./assets/images/cor_2.jpg" alt="photo indonesia" /></div>
+              <div class="swiper-slide"><img src="./assets/images/cor_3.jpg" alt="photo indonesia" /></div>
+              <div class="swiper-slide"><img src="./assets/images/cor_4.jpg" alt="photo indonesia" /></div>
+              <div class="swiper-slide"><img src="./assets/images/cor_5.jpg" alt="photo indonesia" /></div>
+              <div class="swiper-slide"><img src="./assets/images/cor_6.jpg" alt="photo indonesia" /></div>
+            </div>
+          </div>
+          <div class="secrets-section__button secrets-section__button--wrapper-next">
+            <button type="button">
+              <svg class="secrets-section__button-next" width="24px" height="24px">
+                <use href="./assets/icons/symbol-defs.svg#icon-Union-1"></use>
+              </svg>
+            </button>
+          </div>
         </div>
+        <div class="secrets-section__swiper-pagination"></div>
         <article class="secrets-section__statistics">
           <div class="secrets-section__statistics--title">
             <h3>By The Numbers</h3>
@@ -128,6 +140,16 @@
           </div>
         </article>
       </section>
+      <section class="relief-section">
+        <h2 class="relief-section__title">Our hills and valleys are like nothing you’ve seen.</h2>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce sit amet magna commodo, tempus dolor sit amet,
+          laoreet elit. Donec mauris tortor.
+        </p>
+        <button class="relief-section__button button" type="button">Learm More</button>
+      </section>
     </main>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="./js/script_swiper.js"></script>
   </body>
 </html>

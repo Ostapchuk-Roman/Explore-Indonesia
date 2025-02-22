@@ -12,11 +12,11 @@ body {
   background-size: 1920px;
 
   @media screen and (max-width: $mw-desctop-d) {
-    background-size: cover;
+    background-size: 1920px;
   }
 
   @media screen and (max-width: $mw-tablet-d) {
-    background-size: cover;
+    background-size: 2020px;
   }
 }
 

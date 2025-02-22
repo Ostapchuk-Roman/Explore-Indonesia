@@ -1,0 +1,64 @@
+@import '../utils/variables';
+@import '../utils/mixin';
+
+.relief-section {
+  height: 821px;
+  background-color: $primary-lighter-color;
+  background-image: url(../../assets/images/relief_background_left.png),
+    url(../../assets/images/relief_background_right.png);
+  background-position: left top, right bottom;
+  background-repeat: no-repeat;
+  background-size: 35%, 50%;
+
+  @media screen and (max-width: $mw-desctop-d) {
+    background-size: 40%, 60%;
+  }
+  @media screen and (max-width: $mw-tablet-d) {
+    background-size: 40%, 100%;
+  }
+  @media screen and (max-width: $mw-mobil-d) {
+    height: 761px;
+    background-image: url(../../assets/images/relief_background_left_rotate.png),
+      url(../../assets/images/relief_background_right_360.png);
+    background-size: 100%, 100%;
+    background-position: left top, right bottom;
+  }
+
+  &__title {
+    margin: 0 auto;
+    padding: 258px 30px 0;
+    max-width: 624px;
+    @include text-style($fs-d-h3, 1.2, $accent-darker-color);
+    text-align: center;
+
+    @media screen and (max-width: $mw-desctop-d) {
+      max-width: 474px;
+    }
+    @media screen and (max-width: $mw-mobil-d) {
+      padding: 171px 30px 0;
+      @include text-style($fs-m-h1, 1.15, $accent-darker-color);
+    }
+  }
+  &__button {
+    display: block;
+    margin: 32px auto 275px auto;
+    padding: 16px 56px;
+    @include text-style($fs-p, 1.5, $primary-lighter-color);
+    @media screen and (max-width: $mw-mobil-d) {
+      margin: 41px auto 116px auto;
+      padding: 20px 85px;
+    }
+  }
+}
+
+.relief-section p {
+  margin: 32px auto 0 auto;
+  padding: 0 30px;
+  max-width: 470px;
+  @include text-style($fs-p, 1.55, $secondary-darker-color);
+  text-align: center;
+  @media screen and (max-width: $mw-mobil-d) {
+    margin: 36px auto 0 auto;
+    @include text-style($fs-m-p, 1.55, $secondary-darker-color);
+  }
+}

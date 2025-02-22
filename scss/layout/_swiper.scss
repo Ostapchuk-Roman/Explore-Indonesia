@@ -1,0 +1,125 @@
+@import '../utils/variables';
+@import '../utils/mixin';
+
+.secrets-section {
+  &__wrapper {
+    &--swiper {
+      display: flex;
+      margin: 44px auto 28px auto;
+      margin-top: 44px;
+      width: 1180px;
+
+      @media screen and (max-width: $mw-desctop-d) {
+        width: 672px;
+      }
+
+      @media screen and (max-width: $mw-tablet-d) {
+        width: 360px;
+      }
+      @media screen and (max-width: $mw-mobil-d) {
+        width: 280px;
+        margin: 23px auto 16px auto;
+      }
+    }
+  }
+  &__button {
+    flex: 1;
+    display: flex;
+    @media screen and (max-width: $mw-mobil-d) {
+      display: none;
+    }
+    &--wrapper-prev {
+      justify-content: flex-end;
+      margin: auto 64px auto 24px;
+    }
+    &--wrapper-next {
+      margin: auto 24px auto 64px;
+    }
+    @media screen and (max-width: $mw-desctop-d) {
+      &--wrapper-prev {
+        justify-content: flex-end;
+        margin: auto 46px auto 24px;
+      }
+      &--wrapper-next {
+        margin: auto 24px auto 46px;
+      }
+    }
+
+    @media screen and (max-width: $mw-tablet-d) {
+      &--wrapper-prev {
+        justify-content: flex-end;
+        margin: auto 28px auto 24px;
+      }
+      &--wrapper-next {
+        margin: auto 24px auto 28px;
+      }
+    }
+
+    @media screen and (max-width: $mw-mobil-d) {
+      &--wrapper-prev {
+        justify-content: flex-end;
+        margin: auto 9px auto 24px;
+      }
+      &--wrapper-next {
+        margin: auto 24px auto 9px;
+      }
+    }
+  }
+
+  &__button-prev {
+    display: block;
+    cursor: pointer;
+  }
+  &__button-next {
+    display: block;
+    rotate: 180deg;
+    cursor: pointer;
+  }
+  &__swiper-pagination {
+    text-align: center;
+  }
+}
+
+.swiper-slide img {
+  border-radius: 12px;
+  margin: 0 auto;
+}
+
+.swiper-slide img {
+  border-radius: 12px;
+
+  @media screen and (max-width: $mw-mobil-d) {
+    border-radius: 10px;
+  }
+}
+
+.swiper-pagination {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+}
+
+.swiper-pagination-bullet {
+  width: 19px !important;
+  height: 19px !important;
+
+  background-color: rgba(133, 163, 178, 1) !important;
+  opacity: 1 !important;
+  border-radius: 50% !important;
+  transition: all 0.3s ease !important;
+
+  @media screen and (max-width: $mw-tablet-d) {
+    width: 16px !important;
+    height: 16px !important;
+  }
+
+  @media screen and (max-width: $mw-mobil-d) {
+    width: 13px !important;
+    height: 13px !important;
+  }
+}
+
+.swiper-pagination-bullet-active {
+  background-color: rgba(221, 34, 66, 1) !important;
+  transform: scale(1.2) !important;
+}
