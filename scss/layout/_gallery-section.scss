@@ -1,0 +1,97 @@
+@import '../utils/variables';
+@import '../utils/mixin';
+
+.gallery-section {
+  background-color: $primary-lighter-color;
+
+  &__container {
+    display: flex;
+    justify-content: center;
+    margin-top: 41px;
+    padding: 0 0 229px;
+
+    @media screen and (max-width: $mw-desctop-d) {
+      flex-direction: column;
+
+      &--inline {
+        display: flex;
+        justify-content: center;
+      }
+    }
+    @media screen and (max-width: $mw-tablet-d) {
+      margin-top: 0;
+      padding: 0 0 40px;
+    }
+
+    &--wrapper-wrapper {
+      display: flex;
+      justify-content: center;
+    }
+  }
+  &__style-img {
+    border-radius: 12px;
+    transition: transform 0.3s ease-in-out;
+  }
+  &__style-img:hover {
+    transform: scale(1.1);
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.3);
+  }
+  @media screen and (max-width: $mw-desctop-d) {
+    &--inline {
+      display: flex;
+      justify-content: center;
+      padding: 0 30px;
+    }
+  }
+}
+
+.gallery-section h2 {
+  padding-top: 177px;
+  text-align: center;
+  @include text-style($fs-d-h2, 1.5, $primary-darker-color);
+
+  @media screen and (max-width: $mw-tablet-d) {
+    padding-top: 32px;
+    @include text-style($fs-m-h3, 1.5, $primary-darker-color);
+  }
+}
+
+.gallery-section p {
+  width: 512px;
+  margin: 42px auto 0;
+  text-align: center;
+  @include text-style($fs-p, 1.55, $secondary-darker-color);
+
+  @media screen and (max-width: $mw-tablet-d) {
+    width: auto;
+    margin: 20px 30px 0;
+    @include text-style($fs-m-p, 1.5, $secondary-darker-color);
+  }
+}
+
+.gallery-section img {
+  width: 340px;
+  height: auto;
+  margin: 30px 15px;
+
+  @media screen and (max-width: $mw-tablet-d) {
+    width: 85%;
+  }
+
+  @media screen and (max-width: $mw-mobil-d) {
+    width: 141px;
+    height: auto;
+    margin: 13px 7px;
+  }
+}
+
+.style-img-wrapper img {
+  margin: 0 15px;
+
+  @media screen and (min-width: $mw-desctop-d) {
+    margin: 30px 15px;
+  }
+  @media screen and (max-width: $mw-mobil-d) {
+    margin: 0px 7px;
+  }
+}
