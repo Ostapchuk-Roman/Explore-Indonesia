@@ -1,0 +1,141 @@
+@import '../utils/variables';
+@import '../utils/mixin';
+
+.actions-section {
+  background-color: #dce8f2;
+  padding: 0 30px;
+
+  &__title {
+    padding-top: 119px;
+    padding-bottom: 44px;
+    color: $primary-darker-color;
+
+    @media screen and (max-width: $mw-desctop-d) {
+      @include text-style($fs-d-h3, 1.57, $primary-darker-color);
+    }
+
+    @media screen and (max-width: $mw-tablet-d) {
+      @include text-style($fs-d-h3, 1.57, $primary-darker-color);
+      text-align: center;
+    }
+
+    &--list {
+      padding-left: 103px;
+      padding-bottom: 28px;
+      @include text-style($fs-d-h4, 1.57, $primary-darker-color);
+
+      @media screen and (max-width: $mw-tablet-d) {
+        padding-left: 40px;
+        @include text-style($fs-d-h4, 1.08, $primary-darker-color);
+      }
+    }
+  }
+  &__wrapper-list {
+    max-width: 1142px;
+    margin: 0 auto 17px;
+    list-style: none;
+    counter-reset: list-counter;
+  }
+
+  &__wrapper-list li {
+    position: relative;
+    padding-left: 29px;
+  }
+
+  &__wrapper-list li::before {
+    content: counter(list-counter);
+    counter-increment: list-counter;
+    position: absolute;
+    left: 0;
+    top: -13px;
+    padding-top: 12px;
+
+    width: 59px;
+    height: 59px;
+    background-color: $accent-color;
+    @include text-style($fs-d-h4, 1.46, $primary-lighter-color);
+    font-weight: 500;
+    text-align: center;
+    border-radius: 50%;
+  }
+
+  &__text {
+    padding: 0 0 80px 103px;
+    @include text-style($fs-m-h2, 1.57, $secondary-darker-color);
+
+    @media screen and (max-width: $mw-tablet-d) {
+      padding: 0 0 50px 40px;
+      @include text-style($fs-p, 1.57, $secondary-darker-color);
+    }
+
+    &--last {
+      padding: 0 0 16px 103px;
+      @include text-style($fs-m-h2, 1.57, $secondary-darker-color);
+
+      @media screen and (max-width: $mw-tablet-d) {
+        padding: 0 0 18px 40px;
+        @include text-style($fs-p, 1.57, $secondary-darker-color);
+      }
+    }
+  }
+
+  &__container {
+    display: flex;
+
+    @media screen and (max-width: $mw-tablet-d) {
+      flex-direction: column;
+    }
+
+    &--title {
+      padding-left: 46px;
+      padding-bottom: 12px;
+      @include text-style($fs-d-h4, 1.57, $primary-darker-color);
+
+      @media screen and (max-width: $mw-tablet-d) {
+        padding-left: 40px;
+      }
+    }
+
+    &--text {
+      display: inline-block;
+      padding-left: 46px;
+      @include text-style($fs-t-h2, 1.57, $secondary-darker-color);
+
+      @media screen and (max-width: $mw-tablet-d) {
+        width: 100%;
+        padding-left: 40px;
+        padding-bottom: 45px;
+        @include text-style($fs-p, 1.57, $secondary-darker-color);
+      }
+    }
+  }
+
+  &__container img {
+    height: 166px;
+    margin-left: 103px;
+    margin-bottom: 95px;
+    border-radius: 8px;
+
+    @media screen and (max-width: $mw-tablet-d) {
+      width: 205px;
+      height: 136px;
+      margin-left: 40px;
+      margin-bottom: 45px;
+    }
+  }
+
+  &__button {
+    padding: 18px 56px;
+    margin-left: 103px;
+    margin-bottom: 100px;
+
+    @media screen and (max-width: $mw-tablet-d) {
+      width: 251px;
+      margin-left: auto;
+    }
+  }
+}
+
+.before-line {
+  border-left: 3px solid #c0c4cd;
+}

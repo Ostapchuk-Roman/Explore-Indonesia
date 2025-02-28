@@ -75,7 +75,8 @@
   margin: 30px 15px;
 
   @media screen and (max-width: $mw-tablet-d) {
-    width: 85%;
+    max-width: 141px;
+    height: auto;
   }
 
   @media screen and (max-width: $mw-mobil-d) {
