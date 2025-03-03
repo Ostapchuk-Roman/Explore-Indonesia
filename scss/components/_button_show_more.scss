@@ -1,0 +1,41 @@
+@import '../utils/variables';
+@import '../utils/mixin';
+
+.actions-section {
+  &__readmore-toggle {
+    display: none;
+  }
+  @media screen and (max-width: $mw-mobil-d) {
+    &__readmore-container {
+      max-height: 20px;
+      overflow: hidden;
+      position: relative;
+      display: -webkit-box;
+      -webkit-line-clamp: 1;
+      -webkit-box-orient: vertical;
+      text-overflow: ellipsis;
+    }
+
+    &__readmore-toggle {
+      margin-bottom: 32px;
+      display: inline-block;
+      color: $accent-color;
+      cursor: pointer;
+    }
+
+    &__readmore-toggle a {
+      text-decoration: none;
+    }
+
+    &__readmore-toggle:hover {
+      text-decoration: underline;
+    }
+  }
+}
+
+.expanded {
+  max-height: none; /* Розгортаємо блок */
+  white-space: normal; /* Дозволяємо перенос рядків */
+  -webkit-line-clamp: unset; /* Видаляємо обмеження на кількість рядків */
+  text-overflow: unset; /* Вимикаємо троеточие */
+}

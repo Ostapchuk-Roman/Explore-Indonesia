@@ -204,6 +204,40 @@ p {
   }
 }
 
+.actions-section__readmore-toggle {
+  display: none;
+}
+@media screen and (max-width: 360px) {
+  .actions-section__readmore-container {
+    max-height: 20px;
+    overflow: hidden;
+    position: relative;
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+    text-overflow: ellipsis;
+  }
+  .actions-section__readmore-toggle {
+    margin-bottom: 32px;
+    display: inline-block;
+    color: #dd2242;
+    cursor: pointer;
+  }
+  .actions-section__readmore-toggle a {
+    text-decoration: none;
+  }
+  .actions-section__readmore-toggle:hover {
+    text-decoration: underline;
+  }
+}
+
+.expanded {
+  max-height: none; /* Розгортаємо блок */
+  white-space: normal; /* Дозволяємо перенос рядків */
+  -webkit-line-clamp: unset; /* Видаляємо обмеження на кількість рядків */
+  text-overflow: unset; /* Вимикаємо троеточие */
+}
+
 .header__container {
   display: flex;
   justify-content: space-between;
@@ -1152,6 +1186,16 @@ p {
     text-align: center;
   }
 }
+@media screen and (max-width: 360px) {
+  .actions-section__title {
+    padding-top: 29px;
+    padding-bottom: 108px;
+    font-size: 40px;
+    line-height: 1.15;
+    color: #010a20;
+    text-align: center;
+  }
+}
 .actions-section__title--list {
   padding-left: 103px;
   padding-bottom: 28px;
@@ -1167,6 +1211,15 @@ p {
     color: #010a20;
   }
 }
+@media screen and (max-width: 360px) {
+  .actions-section__title--list {
+    padding-left: 0;
+    padding-bottom: 5px;
+    font-size: 22px;
+    line-height: 1.5;
+    color: #010a20;
+  }
+}
 .actions-section__wrapper-list {
   max-width: 1142px;
   margin: 0 auto 17px;
@@ -1176,6 +1229,13 @@ p {
 .actions-section__wrapper-list li {
   position: relative;
   padding-left: 29px;
+}
+@media screen and (max-width: 360px) {
+  .actions-section__wrapper-list li {
+    padding-left: 0;
+    text-align: center;
+    margin-bottom: 80px;
+  }
 }
 .actions-section__wrapper-list li::before {
   content: counter(list-counter);
@@ -1194,6 +1254,15 @@ p {
   text-align: center;
   border-radius: 50%;
 }
+@media screen and (max-width: 360px) {
+  .actions-section__wrapper-list li::before {
+    top: -72px;
+    left: 40%;
+    padding-top: 10px;
+    width: 56px;
+    height: 56px;
+  }
+}
 .actions-section__text {
   padding: 0 0 80px 103px;
   font-size: 22px;
@@ -1208,6 +1277,14 @@ p {
     color: #6f7787;
   }
 }
+@media screen and (max-width: 360px) {
+  .actions-section__text {
+    padding: 0 0 5px 0;
+    font-size: 16px;
+    line-height: 1.5;
+    color: #6f7787;
+  }
+}
 .actions-section__text--last {
   padding: 0 0 16px 103px;
   font-size: 22px;
@@ -1218,6 +1295,14 @@ p {
   .actions-section__text--last {
     padding: 0 0 18px 40px;
     font-size: 18px;
+    line-height: 1.57;
+    color: #6f7787;
+  }
+}
+@media screen and (max-width: 360px) {
+  .actions-section__text--last {
+    padding: 0;
+    font-size: 16px;
     line-height: 1.57;
     color: #6f7787;
   }
@@ -1242,6 +1327,15 @@ p {
     padding-left: 40px;
   }
 }
+@media screen and (max-width: 360px) {
+  .actions-section__container--title {
+    padding-left: 0;
+    padding-bottom: 5px;
+    font-size: 22px;
+    line-height: 1.57;
+    color: #010a20;
+  }
+}
 .actions-section__container--text {
   display: inline-block;
   padding-left: 46px;
@@ -1259,6 +1353,16 @@ p {
     color: #6f7787;
   }
 }
+@media screen and (max-width: 360px) {
+  .actions-section__container--text {
+    display: block;
+    padding-left: 0;
+    padding-bottom: 0;
+    font-size: 16px;
+    line-height: 1.5;
+    color: #6f7787;
+  }
+}
 .actions-section__container img {
   height: 166px;
   margin-left: 103px;
@@ -1273,6 +1377,14 @@ p {
     margin-bottom: 45px;
   }
 }
+@media screen and (max-width: 360px) {
+  .actions-section__container img {
+    width: 100%;
+    height: auto;
+    margin-left: 0;
+    margin-bottom: 40px;
+  }
+}
 .actions-section__button {
   padding: 18px 56px;
   margin-left: 103px;
@@ -1284,7 +1396,17 @@ p {
     margin-left: auto;
   }
 }
+@media screen and (max-width: 360px) {
+  .actions-section__button {
+    margin-bottom: 30px;
+  }
+}
 
 .before-line {
   border-left: 3px solid #c0c4cd;
+}
+@media screen and (max-width: 360px) {
+  .before-line {
+    border-left: none;
+  }
 }/*# sourceMappingURL=main.css.map */

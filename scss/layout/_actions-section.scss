@@ -19,6 +19,13 @@
       text-align: center;
     }
 
+    @media screen and (max-width: $mw-mobil-d) {
+      padding-top: 29px;
+      padding-bottom: 108px;
+      @include text-style($fs-m-h3, 1.15, $primary-darker-color);
+      text-align: center;
+    }
+
     &--list {
       padding-left: 103px;
       padding-bottom: 28px;
@@ -27,6 +34,12 @@
       @media screen and (max-width: $mw-tablet-d) {
         padding-left: 40px;
         @include text-style($fs-d-h4, 1.08, $primary-darker-color);
+      }
+
+      @media screen and (max-width: $mw-mobil-d) {
+        padding-left: 0;
+        padding-bottom: 5px;
+        @include text-style($fs-m-h2, 1.5, $primary-darker-color);
       }
     }
   }
@@ -40,6 +53,11 @@
   &__wrapper-list li {
     position: relative;
     padding-left: 29px;
+    @media screen and (max-width: $mw-mobil-d) {
+      padding-left: 0;
+      text-align: center;
+      margin-bottom: 80px;
+    }
   }
 
   &__wrapper-list li::before {
@@ -49,7 +67,6 @@
     left: 0;
     top: -13px;
     padding-top: 12px;
-
     width: 59px;
     height: 59px;
     background-color: $accent-color;
@@ -57,6 +74,14 @@
     font-weight: 500;
     text-align: center;
     border-radius: 50%;
+
+    @media screen and (max-width: $mw-mobil-d) {
+      top: -72px;
+      left: 40%;
+      padding-top: 10px;
+      width: 56px;
+      height: 56px;
+    }
   }
 
   &__text {
@@ -68,6 +93,11 @@
       @include text-style($fs-p, 1.57, $secondary-darker-color);
     }
 
+    @media screen and (max-width: $mw-mobil-d) {
+      padding: 0 0 5px 0;
+      @include text-style($fs-m-p, 1.5, $secondary-darker-color);
+    }
+
     &--last {
       padding: 0 0 16px 103px;
       @include text-style($fs-m-h2, 1.57, $secondary-darker-color);
@@ -75,6 +105,11 @@
       @media screen and (max-width: $mw-tablet-d) {
         padding: 0 0 18px 40px;
         @include text-style($fs-p, 1.57, $secondary-darker-color);
+      }
+
+      @media screen and (max-width: $mw-mobil-d) {
+        padding: 0;
+        @include text-style($fs-m-p, 1.57, $secondary-darker-color);
       }
     }
   }
@@ -94,6 +129,12 @@
       @media screen and (max-width: $mw-tablet-d) {
         padding-left: 40px;
       }
+
+      @media screen and (max-width: $mw-mobil-d) {
+        padding-left: 0;
+        padding-bottom: 5px;
+        @include text-style($fs-m-h2, 1.57, $primary-darker-color);
+      }
     }
 
     &--text {
@@ -106,6 +147,13 @@
         padding-left: 40px;
         padding-bottom: 45px;
         @include text-style($fs-p, 1.57, $secondary-darker-color);
+      }
+
+      @media screen and (max-width: $mw-mobil-d) {
+        display: block;
+        padding-left: 0;
+        padding-bottom: 0;
+        @include text-style($fs-m-p, 1.5, $secondary-darker-color);
       }
     }
   }
@@ -122,6 +170,13 @@
       margin-left: 40px;
       margin-bottom: 45px;
     }
+
+    @media screen and (max-width: $mw-mobil-d) {
+      width: 100%;
+      height: auto;
+      margin-left: 0;
+      margin-bottom: 40px;
+    }
   }
 
   &__button {
@@ -133,9 +188,17 @@
       width: 251px;
       margin-left: auto;
     }
+
+    @media screen and (max-width: $mw-mobil-d) {
+      margin-bottom: 30px;
+    }
   }
 }
 
 .before-line {
   border-left: 3px solid #c0c4cd;
+
+  @media screen and (max-width: $mw-mobil-d) {
+    border-left: none;
+  }
 }
