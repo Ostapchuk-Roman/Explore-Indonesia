@@ -1,0 +1,130 @@
+@import '../utils/variables';
+@import '../utils/mixin';
+
+.footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: $primary-darker-color;
+  height: 136px;
+
+  @media screen and (max-width: $mw-tablet-d) {
+    flex-direction: column;
+    height: 100%;
+  }
+
+  &__navigation {
+    display: flex;
+    align-items: center;
+    @media screen and (max-width: $mw-tablet-d) {
+      flex-direction: column;
+    }
+  }
+
+  &__logo {
+    width: 174px;
+    margin: auto 124px auto 70px;
+
+    @media screen and (max-width: $mw-desctop-d) {
+      margin: auto 84px auto 30px;
+    }
+
+    @media screen and (max-width: $mw-tablet-d) {
+      margin: 146px auto 36px;
+    }
+  }
+
+  &__address {
+    display: flex;
+    @media screen and (max-width: $mw-tablet-d) {
+      flex-direction: column;
+      gap: 36px;
+    }
+
+    &--social svg {
+      margin-left: 27px;
+      margin-top: 6px;
+      fill: $primary-lighter-color;
+
+      @media screen and (max-width: $mw-tablet-d) {
+        margin-left: 0;
+        margin: 0 24px;
+        width: 24px;
+        height: 24px;
+      }
+    }
+
+    &--copyright {
+      margin-right: 153px;
+      font-style: normal;
+      margin: auto 0;
+
+      @media screen and (max-width: $mw-tablet-d) {
+        margin: 0 auto;
+        @include text-style($fs-m-h2, 1.56, $primary-lighter-color);
+      }
+    }
+  }
+
+  &__button-top {
+    position: relative;
+    right: 50px;
+    top: -70px;
+    width: 104px;
+    height: 104px;
+    border-radius: 50%;
+    background-color: $accent-color;
+
+    @media screen and (max-width: $mw-desctop-d) {
+      width: 74px;
+      height: 74px;
+    }
+
+    @media screen and (max-width: $mw-tablet-d) {
+      right: -100px;
+      top: -755px;
+    }
+  }
+
+  &__button-top svg {
+    transform: rotate(90deg);
+    fill: $primary-lighter-color;
+  }
+}
+.footer__navigation--list {
+  display: flex;
+  justify-content: space-between;
+  width: 335px;
+  @media screen and (max-width: $mw-desctop-d) {
+    width: 55px;
+    flex-direction: column;
+    display: inline;
+  }
+}
+
+.footer__navigation--list li {
+  @media screen and (max-width: $mw-tablet-d) {
+    width: 100%;
+    margin-bottom: 36px;
+    text-align: center;
+  }
+}
+
+.footer__navigation--list a {
+  @media screen and (max-width: $mw-tablet-d) {
+    @include text-style($fs-m-h2, 1.56, $primary-lighter-color);
+  }
+}
+.footer__address--social {
+  display: flex;
+  margin: auto 36px;
+
+  @media screen and (max-width: $mw-desctop-d) {
+    margin: 27px;
+  }
+
+  @media screen and (max-width: $mw-tablet-d) {
+    display: flex;
+    flex-direction: row;
+  }
+}
