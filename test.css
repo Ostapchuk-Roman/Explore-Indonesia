@@ -1,34 +1,61 @@
-body {
-  padding: 0 100px;
+.btn-21,
+.btn-21 *,
+.btn-21:after,
+.btn-21:before {
+  border: 0 solid;
+  box-sizing: border-box;
 }
-.readmore-container {
-  width: 100%;
-  max-height: 200px;
-  overflow: hidden; /* Обрізаємо текст */
-  margin-bottom: 10px;
-  font-size: 25px;
-  position: relative; /* Для правильного позиціонування кнопки */
-  display: -webkit-box; /* Для підтримки багаторядкових елементів */
-  -webkit-line-clamp: 5; /* Обмежуємо кількість рядків (можна налаштувати) */
-  -webkit-box-orient: vertical; /* Встановлюємо вертикальну орієнтацію */
-  text-overflow: ellipsis; /* Додаємо троеточие при обрізанні */
-}
-
-.readmore-toggle {
-  display: inline-block;
-  margin-top: 10px;
-  color: #007bff;
-  text-decoration: none;
+.btn-21 {
+  background-color: #dd2242;
+  border: white 1px;
   cursor: pointer;
 }
 
-.readmore-toggle:hover {
-  text-decoration: underline;
+.btn-21 {
+  border-radius: 20px;
+  border-width: 15px;
+  overflow: hidden;
+  padding: 5px 15px;
+  position: relative;
+  text-transform: uppercase;
+}
+.btn-21 span {
+  color: wheat;
 }
 
-.expanded {
-  max-height: none; /* Розгортаємо блок */
-  white-space: normal; /* Дозволяємо перенос рядків */
-  -webkit-line-clamp: unset; /* Видаляємо обмеження на кількість рядків */
-  text-overflow: unset; /* Вимикаємо троеточие */
+.btn-21 span::after {
+  color: red;
+}
+
+.btn-21:before {
+  animation: move-out 0.3s;
+  background: #d8b4b9;
+  content: '';
+  height: 100%;
+  left: -100%;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  will-change: transform;
+}
+.btn-21:hover:before {
+  animation: move-in 0.3s forwards;
+}
+
+@keyframes move-in {
+  0% {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(100%);
+  }
+}
+
+@keyframes move-out {
+  0% {
+    transform: translateX(100%);
+  }
+  to {
+    transform: translateX(200%);
+  }
 }

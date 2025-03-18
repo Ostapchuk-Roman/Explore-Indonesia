@@ -1,5 +1,9 @@
 @import '../utils/variables';
 @import '../utils/mixin';
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   font-family: 'DM Sans';
   width: 100%;
@@ -16,7 +20,7 @@ body {
   }
 
   @media screen and (max-width: $mw-tablet-d) {
-    background-size: 2020px;
+    background-size: 2520px;
   }
 }
 

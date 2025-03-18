@@ -73,6 +73,10 @@ ol {
   font-weight: normal;
   font-style: normal;
 }
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   font-family: "DM Sans";
   width: 100%;
@@ -90,7 +94,7 @@ body {
 }
 @media screen and (max-width: 768px) {
   body {
-    background-size: 2020px;
+    background-size: 2520px;
   }
 }
 
@@ -243,8 +247,19 @@ p {
   justify-content: space-between;
   align-items: center;
 }
+@media screen and (max-width: 768px) {
+  .header__container {
+    flex-direction: column;
+  }
+}
 .header__nav {
   display: flex;
+}
+@media screen and (max-width: 768px) {
+  .header__nav {
+    width: 100%;
+    justify-content: space-between;
+  }
 }
 .header__logo {
   margin: 12px 0 0 24px;
@@ -252,6 +267,8 @@ p {
 @media screen and (max-width: 768px) {
   .header__logo {
     width: 148px;
+    height: auto;
+    flex-shrink: 0;
     margin: 48px 0 0 24px;
   }
 }
@@ -276,18 +293,90 @@ p {
 .header__menu-item {
   text-transform: uppercase;
   font-weight: 700;
+  transition: transform 0.3s ease;
 }
-.header__container-bar {
-  display: none;
+.header__menu-item ul,
+.header__menu li:hover {
+  transform: scale(1.2);
 }
-@media screen and (max-width: 768px) {
-  .header__container-bar {
-    display: block;
-    fill: #ffffff;
-    margin: 56px 31px 0 0;
-  }
+.header__menu-item ul,
+.header__menu li::after {
+  content: "";
+  color: #dd2242;
+  position: absolute;
+  left: 0;
+  bottom: 0px;
+  width: 100%;
+  height: 2px;
+  background: #dd2242;
+  transform: scaleX(0);
+  transition: transform 0.2s ease;
+}
+.header__menu-item ul,
+.header__menu li:hover::after {
+  transform: scale(1.1);
 }
 
+.dropdown {
+  position: relative;
+  display: none;
+}
+.dropdown__button {
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+.dropdown__button svg {
+  margin: 60px 30px 0 0;
+  width: 24px;
+  height: 24px;
+  fill: #ffffff;
+}
+.dropdown__menu {
+  position: absolute;
+  top: 100px;
+  right: 50%;
+  background-color: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(15px);
+  border-radius: 8px;
+  width: 260px;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-10px);
+  transition: all 0.3s ease-in-out;
+}
+.dropdown__menu--list {
+  padding: 10px 0;
+  font-weight: 700;
+  text-align: center;
+}
+.dropdown__menu--item {
+  padding: 10px 20px;
+}
+.dropdown__menu--item a {
+  text-transform: uppercase;
+  color: #ffffff;
+  display: block;
+  transition: 0.3s;
+}
+.dropdown__menu--item a:hover {
+  color: #dd2242;
+}
+
+.dropdown.active .dropdown__menu {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+@media (max-width: 768px) {
+  .header__menu {
+    display: none; /* Ховаємо головне меню */
+  }
+  .dropdown {
+    display: block; /* Відображаємо бургер-кнопку */
+  }
+}
 .hero-section__title {
   margin: 196px 0 21px 278px;
   max-width: 768px;
@@ -324,17 +413,17 @@ p {
   }
 }
 
-.stip-section {
+.trip-section {
   position: relative;
   display: flex;
 }
 @media screen and (max-width: 768px) {
-  .stip-section {
+  .trip-section {
     position: static;
     display: block;
   }
 }
-.stip-section__list {
+.trip-section__list {
   justify-content: space-around;
   align-items: center;
   width: 1226px;
@@ -353,7 +442,7 @@ p {
   list-style-type: decimal-leading-zero;
 }
 @media screen and (max-width: 1280px) {
-  .stip-section__list {
+  .trip-section__list {
     width: 100%;
     height: 160px;
     padding: 22px;
@@ -361,7 +450,7 @@ p {
   }
 }
 @media screen and (max-width: 768px) {
-  .stip-section__list {
+  .trip-section__list {
     position: static;
     display: block;
     width: 85%;
@@ -370,23 +459,23 @@ p {
     padding: 32px;
   }
 }
-.stip-section__list p {
+.trip-section__list p {
   max-width: 210px;
 }
 @media screen and (max-width: 768px) {
-  .stip-section__list p {
+  .trip-section__list p {
     max-width: max-content;
     padding-bottom: 32px;
   }
 }
-.stip-section__title {
+.trip-section__title {
   margin-top: 16px;
   font-size: 24px;
   line-height: 1.7;
   color: #ffffff;
 }
 @media screen and (max-width: 1280px) {
-  .stip-section__title {
+  .trip-section__title {
     margin-top: 8px;
     font-size: 20px;
     line-height: 1;
@@ -394,14 +483,14 @@ p {
   }
 }
 @media screen and (max-width: 768px) {
-  .stip-section__title {
+  .trip-section__title {
     margin-top: 4px;
     font-size: 26px;
     line-height: 1.57;
     color: #ffffff;
   }
 }
-.stip-section__video-container {
+.trip-section__video-container {
   display: block;
   position: absolute;
   right: 0;
@@ -409,12 +498,12 @@ p {
   max-width: 418px;
 }
 @media screen and (max-width: 1280px) {
-  .stip-section__video-container {
+  .trip-section__video-container {
     max-width: 328px;
   }
 }
 @media screen and (max-width: 768px) {
-  .stip-section__video-container {
+  .trip-section__video-container {
     max-width: 85%;
     position: relative;
     margin: 0 auto;
@@ -1484,7 +1573,7 @@ p {
 }
 .footer__button-top {
   position: relative;
-  right: 50px;
+  right: 150px;
   top: -70px;
   width: 104px;
   height: 104px;
@@ -1504,8 +1593,17 @@ p {
   }
 }
 .footer__button-top svg {
+  position: relative;
+  right: -40px;
+  top: 30px;
   transform: rotate(90deg);
   fill: #ffffff;
+}
+@media screen and (max-width: 1280px) {
+  .footer__button-top svg {
+    right: -26px;
+    top: 18px;
+  }
 }
 
 .footer__navigation--list {

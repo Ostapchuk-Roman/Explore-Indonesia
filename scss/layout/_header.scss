@@ -1,26 +1,32 @@
 @import '../utils/variables';
+@import '../utils/mixin';
 .header {
   &__container {
     display: flex;
     justify-content: space-between;
     align-items: center;
+
+    @media screen and (max-width: $mw-tablet-d) {
+      flex-direction: column;
+    }
   }
 
   &__nav {
     display: flex;
+
+    @media screen and (max-width: $mw-tablet-d) {
+      width: 100%;
+      justify-content: space-between;
+    }
   }
 
   &__logo {
-    // width: 186px;
     margin: 12px 0 0 24px;
-
-    // @media screen and (max-width: $mw-desctop-d) {
-    //   width: 108px;
-    //   margin: 12px 0 0 12px;
-    // }
 
     @media screen and (max-width: $mw-tablet-d) {
       width: 148px;
+      height: auto;
+      flex-shrink: 0;
       margin: 48px 0 0 24px;
     }
   }
@@ -44,62 +50,30 @@
     &-item {
       text-transform: uppercase;
       font-weight: 700;
+      transition: transform 0.3s ease;
     }
-  }
+    &-item ul,
+    li:hover {
+      transform: scale(1.2);
+    }
 
-  // &__container-search {
-  //   position: relative;
-  //   margin: 36px 60px 0 auto;
+    &-item ul,
+    li::after {
+      content: '';
+      color: $accent-color;
+      position: absolute;
+      left: 0;
+      bottom: 0px;
+      width: 100%;
+      height: 2px;
+      background: $accent-color;
+      transform: scaleX(0);
+      transition: transform 0.2s ease;
+    }
 
-  //   @media screen and (max-width: $mw-desctop-d) {
-  //     margin: 16px 16px 0 auto;
-  //   }
-  //   @media screen and (max-width: $mw-tablet-d) {
-  //     margin: 44px 64px 0 auto;
-  //   }
-  // }
-
-  // &__search-input {
-  //   display: block;
-  //   opacity: 0;
-  //   position: absolute;
-  //   width: 300px;
-  //   top: -8px;
-  //   right: 40px;
-  //   padding: 4px 10px;
-  //   background-color: antiquewhite;
-  //   border: 1px solid #ccc;
-  //   border-radius: 20px;
-  //   transform: translate;
-  //   transition: opacity 1s ease;
-
-  //   @media screen and (max-width: $mw-desctop-d) {
-  //     width: 130px;
-  //   }
-
-  //   @media screen and (max-width: $mw-tablet-d) {
-  //     width: 130px;
-  //     top: -10px;
-  //   }
-  // }
-
-  // &__button-search {
-  //   cursor: pointer;
-  //   &--icon use {
-  //     fill: $primary-lighter-color;
-  //   }
-  // }
-  // &__container-search:hover &__search-input {
-  //   display: block;
-  //   opacity: 1;
-  // }
-
-  &__container-bar {
-    display: none;
-    @media screen and (max-width: $mw-tablet-d) {
-      display: block;
-      fill: $primary-lighter-color;
-      margin: 56px 31px 0 0;
+    &-item ul,
+    li:hover::after {
+      transform: scale(1.1);
     }
   }
 }

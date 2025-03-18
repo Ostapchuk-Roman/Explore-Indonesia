@@ -68,7 +68,7 @@
 
   &__button-top {
     position: relative;
-    right: 50px;
+    right: 150px;
     top: -70px;
     width: 104px;
     height: 104px;
@@ -87,8 +87,16 @@
   }
 
   &__button-top svg {
+    position: relative;
+    right: -40px;
+    top: 30px;
     transform: rotate(90deg);
     fill: $primary-lighter-color;
+
+    @media screen and (max-width: $mw-desctop-d) {
+      right: -26px;
+      top: 18px;
+    }
   }
 }
 .footer__navigation--list {
