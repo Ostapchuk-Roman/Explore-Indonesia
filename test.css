@@ -1,61 +1,62 @@
-.btn-21,
-.btn-21 *,
-.btn-21:after,
-.btn-21:before {
-  border: 0 solid;
-  box-sizing: border-box;
+/* Основні стилі для центрування вікна */
+.modal {
+  display: none; /* Приховано за замовчуванням */
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5); /* Прозорий чорний фон */
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
-.btn-21 {
-  background-color: #dd2242;
-  border: white 1px;
+
+/* Контент модального вікна */
+.modal-content {
+  background: white;
+  padding: 20px;
+  width: 400px;
+  border-radius: 10px;
+  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.3);
+  text-align: center;
+  position: relative;
+}
+
+/* Закриття вікна */
+.close-modal {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  font-size: 24px;
   cursor: pointer;
 }
 
-.btn-21 {
-  border-radius: 20px;
-  border-width: 15px;
-  overflow: hidden;
-  padding: 5px 15px;
-  position: relative;
-  text-transform: uppercase;
-}
-.btn-21 span {
-  color: wheat;
+/* Стилі для форми */
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
 }
 
-.btn-21 span::after {
-  color: red;
-}
-
-.btn-21:before {
-  animation: move-out 0.3s;
-  background: #d8b4b9;
-  content: '';
-  height: 100%;
-  left: -100%;
-  position: absolute;
-  top: 0;
+input,
+textarea {
   width: 100%;
-  will-change: transform;
-}
-.btn-21:hover:before {
-  animation: move-in 0.3s forwards;
-}
-
-@keyframes move-in {
-  0% {
-    transform: translateX(0);
-  }
-  to {
-    transform: translateX(100%);
-  }
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
 }
 
-@keyframes move-out {
-  0% {
-    transform: translateX(100%);
-  }
-  to {
-    transform: translateX(200%);
-  }
+button {
+  padding: 10px;
+  background: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button:hover {
+  background: #0056b3;
 }

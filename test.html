@@ -7,6 +7,29 @@
     <link rel="stylesheet" href="./test.css" />
   </head>
   <body>
-    <button class="btn-21"><span>Learn more</span></button>
+    <button class="open-modal">Зв'язатися з нами</button>
+
+    <div class="modal" id="contactModal">
+      <div class="modal-content">
+        <span class="close-modal">&times;</span>
+        <h2>Контактна форма</h2>
+        <form>
+          <label for="name">Ім'я</label>
+          <input type="text" id="name" name="name" required />
+
+          <label for="phone">Телефон</label>
+          <input type="tel" id="phone" name="phone" required />
+
+          <label for="email">E-mail</label>
+          <input type="email" id="email" name="email" required />
+
+          <label for="message">Коментар</label>
+          <textarea id="message" name="message" rows="4" required></textarea>
+
+          <button type="submit button">Надіслати</button>
+        </form>
+      </div>
+    </div>
+    <script src="./test.js"></script>
   </body>
 </html>

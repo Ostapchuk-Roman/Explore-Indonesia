@@ -40,13 +40,10 @@
     }
   }
   &__button {
-    display: block;
     margin: 32px auto 275px auto;
-    padding: 16px 56px;
-    @include text-style($fs-p, 1.5, $primary-lighter-color);
+
     @media screen and (max-width: $mw-mobil-d) {
       margin: 41px auto 116px auto;
-      padding: 20px 85px;
     }
   }
 }
@@ -57,6 +54,7 @@
   max-width: 470px;
   @include text-style($fs-p, 1.55, $secondary-darker-color);
   text-align: center;
+
   @media screen and (max-width: $mw-mobil-d) {
     margin: 36px auto 0 auto;
     @include text-style($fs-m-p, 1.55, $secondary-darker-color);

@@ -48,7 +48,7 @@
     <main>
       <section class="hero-section">
         <h1 class="hero-section__title">explore indonesia</h1>
-        <button class="hero-section__button button" type="button">Start travelling</button>
+        <button class="hero-section__button button open-modal" type="button">Start travelling</button>
       </section>
       <section class="trip-section">
         <ol class="trip-section__list">
@@ -84,14 +84,14 @@
         <div class="walkways-section__wrapper">
           <h3 class="walkways-section__title">The walkways of Indonesia spellbind</h3>
           <p>Lorem ipsum dolor sit amet, consectetur adip iscing elit. Fusce commodo magna et libero mollis rhoncus.</p>
-          <button class="walkways-section__button button" type="button">Learn More</button>
+          <button class="walkways-section__button button open-modal" type="button">Learn More</button>
         </div>
       </section>
       <section class="beaches-section">
         <div class="beaches-section__wrapper">
           <h3 class="beaches-section__title">Perfect beaches exude relaxation and fun</h3>
           <p>Lorem ipsum dolor sit amet, consectetur adip iscing elit. Fusce commodo magna et libero mollis rhoncus.</p>
-          <button class="beaches-section__button button" type="button">Learn More</button>
+          <button class="beaches-section__button button open-modal" type="button">Learn More</button>
         </div>
         <div class="beaches-section__wrapper-img">
           <img
@@ -160,7 +160,7 @@
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce sit amet magna commodo, tempus dolor sit amet,
           laoreet elit. Donec mauris tortor.
         </p>
-        <button class="relief-section__button button" type="button">Learn More</button>
+        <button class="relief-section__button button open-modal" type="button">Learn More</button>
       </section>
       <section class="life-section" id="life-section">
         <h3 class="life-section__title">
@@ -288,7 +288,7 @@
               </p>
             </div>
             <a href="#" class="actions-section__readmore-toggle">Read More</a>
-            <button class="actions-section__button button" type="button">Learn More</button>
+            <button class="actions-section__button button open-modal" type="button">Learn More</button>
           </li>
         </ol>
       </section>
@@ -347,8 +347,32 @@
         </address>
       </footer>
     </main>
+
+    <div class="modal" id="contactModal">
+      <div class="modal-content">
+        <span class="close-modal">&times;</span>
+        <h2 class="modal-title">Контактна форма</h2>
+        <form>
+          <label for="name">Ім'я</label>
+          <input type="text" id="name" name="name" required />
+
+          <label for="phone">Телефон</label>
+          <input type="tel" id="phone" name="phone" required />
+
+          <label for="email">E-mail</label>
+          <input type="email" id="email" name="email" required />
+
+          <label for="message">Коментар</label>
+          <textarea id="message" name="message" rows="4" required></textarea>
+
+          <button type="submit-button">Надіслати</button>
+        </form>
+      </div>
+    </div>
+
     <script src="./js/script_navbar.js" defer></script>
     <script src="./js/script_button.js" defer></script>
+    <script src="./js/script_open-modal.js" defer></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js" defer></script>
     <script src="./js/script_swiper.js" defer></script>
     <script src="./js/button_show_more.js" defer></script>

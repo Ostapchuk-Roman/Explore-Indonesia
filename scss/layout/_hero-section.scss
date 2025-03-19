@@ -23,15 +23,10 @@
 
     @media screen and (max-width: $mw-desctop-d) {
       margin: 0 auto 150px;
-      display: block;
     }
 
     @media screen and (max-width: $mw-tablet-d) {
       margin: 0 auto 54px;
-      display: block;
-      width: 80%;
-      height: 60px;
-      max-width: 260px;
     }
   }
 }

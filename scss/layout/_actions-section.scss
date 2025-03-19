@@ -3,7 +3,11 @@
 
 .actions-section {
   background-color: #dce8f2;
-  padding: 0 30px;
+  padding: 0 30px 100px;
+
+  @media screen and (max-width: $mw-mobil-d) {
+    padding: 0 30px 0;
+  }
 
   &__title {
     padding-top: 119px;
@@ -180,17 +184,14 @@
   }
 
   &__button {
-    padding: 18px 56px;
-    margin-left: 103px;
-    margin-bottom: 100px;
+    margin: 0 0 0 104px;
 
     @media screen and (max-width: $mw-tablet-d) {
-      width: 251px;
-      margin-left: auto;
+      margin: 0 0 0 40px;
     }
 
     @media screen and (max-width: $mw-mobil-d) {
-      margin-bottom: 30px;
+      margin: 0 auto;
     }
   }
 }
