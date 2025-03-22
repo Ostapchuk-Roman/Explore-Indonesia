@@ -1,22 +1,33 @@
 document.addEventListener('DOMContentLoaded', function () {
   const modal = document.getElementById('contactModal');
-  const openBtn = document.querySelector('.open-modal');
+  const openBtns = document.querySelectorAll('.open-modal');
   const closeBtn = document.querySelector('.close-modal');
 
   // Відкриття модального вікна
-  openBtn.addEventListener('click', function () {
-    modal.style.display = 'flex';
+  openBtns.forEach(button => {
+    button.addEventListener('click', function () {
+      modal.style.display = 'flex';
+      setTimeout(() => {
+        modal.classList.add('show'); // Додаємо анімацію після короткої затримки
+      }, 10);
+    });
   });
 
-  // Закриття по хрестику
+  // Закриття модального вікна
   closeBtn.addEventListener('click', function () {
-    modal.style.display = 'none';
+    modal.classList.remove('show');
+    setTimeout(() => {
+      modal.style.display = 'none';
+    }, 500); // Час має відповідати transition у CSS
   });
 
-  // Закриття при кліку поза формою
+  // Закриття при кліку поза модальним вікном
   window.addEventListener('click', function (event) {
     if (event.target === modal) {
-      modal.style.display = 'none';
+      modal.classList.remove('show');
+      setTimeout(() => {
+        modal.style.display = 'none';
+      }, 500);
     }
   });
 });

@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" overflow="hidden" style="position:absolute;width:0;height:0">
+  <defs>
+    <symbol id="icon-phone" viewBox="0 0 32 32">
+      <path d="M22 20c-2 2-2 4-4 4s-4-2-6-4-4-4-4-6 2-2 4-4-4-8-6-8-6 6-6 6c0 4 4.109 12.109 8 16s12 8 16 8c0 0 6-4 6-6s-6-8-8-6z"/>
+    </symbol>
+    <symbol id="icon-envelop" viewBox="0 0 32 32">
+      <path d="M29 4H3C1.35 4 0 5.35 0 7v20c0 1.65 1.35 3 3 3h26c1.65 0 3-1.35 3-3V7c0-1.65-1.35-3-3-3zM12.461 17.199 4 23.789V8.113l8.461 9.086zM5.512 8h20.976L16 15.875 5.512 8zm7.278 9.553L16 21l3.21-3.447L25.79 26H6.211l6.58-8.447zm6.749-.354L28 8.113v15.676l-8.461-6.59z"/>
+    </symbol>
+  </defs>
+</svg>

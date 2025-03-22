@@ -9,13 +9,35 @@
   left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(0, 0, 0, 0.5);
+  background: rgba(225, 225, 225, 0.162);
   backdrop-filter: blur(15px);
   justify-content: center;
   align-items: center;
   opacity: 0;
   transition: opacity 0.5s ease;
   z-index: 10000;
+
+  &__title-main {
+    @include text-style($fs-d-h3, 1.5, $primary-lighter-color);
+  }
+
+  &__form {
+    width: 100%;
+  }
+  &__form-titl {
+    color: $secondary-darker-color;
+  }
+
+  &__form-titl {
+    width: 70%;
+    margin: 0 auto;
+    padding-top: 16px;
+    border-bottom: solid 2px $secondary-transparency-color;
+  }
+  &__button {
+    align-items: center;
+    margin: 40px auto;
+  }
 }
 
 /* Коли вікно активне */
@@ -25,23 +47,114 @@
 
 /* Контент форми */
 .modal-content {
+  display: flex;
   background: $primary-transparency-color;
-  padding: 0 20px;
   border-radius: 10px;
-  width: 40%;
+  width: calc(100% - 600px);
   height: calc(100% - 60px);
   text-align: center;
   position: relative;
+
+  &__our-contacts {
+    width: 650px;
+    height: 100%;
+    background-color: $secondary-transparency-color;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+
+    &--title {
+      width: 70%;
+      margin: 40px auto 40px auto;
+      border-bottom: solid 2px $secondary-transparency-color;
+    }
+
+    &--info {
+      padding: 0 20px 40px 20px;
+    }
+    &--info-wrapper {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 10px 0;
+    }
+
+    &--info-wrapper a {
+      padding-left: 30px;
+      margin: auto 0;
+      color: $primary-transparency-color;
+    }
+
+    &--icon {
+      width: 24px;
+      height: 24px;
+      fill: $secondary-transparency-color;
+    }
+  }
+  &__social-title {
+    width: 70%;
+    margin: 0 auto 40px auto;
+    @include text-style($fs-d-h4, 1.5, $primary-lighter-color);
+    border-bottom: solid 2px $secondary-transparency-color;
+  }
+
+  &__address-title {
+    font-style: normal;
+  }
+
+  &__address {
+    display: block;
+    margin: 0 auto;
+    width: 70%;
+    color: $primary-transparency-color;
+  }
+}
+
+.modal-content__social-item {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  align-items: center;
+  margin-bottom: 40px;
 }
 
 .close-modal {
   display: block;
-  font-size: 34px;
-  text-align: right;
-  color: $primary-lighter-color;
+  position: relative;
+  left: -20px;
+  top: 20px;
+  width: 24px;
+  height: 24px;
+  fill: $accent-color;
   margin: 0 0 0 auto;
 }
 
-.modal-title {
-  @include text-style($fs-d-h3, 2.5, $primary-lighter-color);
+label {
+  display: block;
+  margin-left: 50px;
+  text-align: left;
+  padding: 30px 0 0;
+  @include text-style($fs-p, 1.55, $secondary-transparency-color);
+}
+input,
+textarea {
+  width: 300px;
+  height: 40px;
+  padding: 10px;
+  border: solid 1px $secondary-transparency-color;
+  border-radius: 10px;
+  background-color: $secondary-lighter-color;
+}
+textarea {
+  height: 10%;
+}
+
+input:invalid,
+textarea:invalid {
+  border: 2px solid $accent-color;
+  background-color: rgba(255, 0, 0, 0.1);
+}
+
+input:focus:invalid,
+textarea:focus:invalid {
+  outline: 2px solid $accent-color;
 }

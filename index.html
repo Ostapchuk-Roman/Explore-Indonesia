@@ -340,36 +340,93 @@
           </ul>
           <a class="footer__address--copyright" href="#">Copyright © 2019</a>
           <a href="#header" class="footer__button-top">
-            <svg class="" width="21px" height="38px">
+            <svg width="21px" height="38px">
               <use href="./assets/icons/symbol-defs.svg#icon-Union-1"></use>
             </svg>
           </a>
         </address>
       </footer>
-    </main>
+      <div class="modal" id="contactModal">
+        <div class="modal-content">
+          <div class="modal-content__our-contacts">
+            <h2 class="modal-content__our-contacts--title modal__title-main">Our contacts</h2>
+            <div class="modal-content__our-contacts--info">
+              <div class="modal-content__our-contacts--info-wrapper">
+                <svg class="modal-content__our-contacts--icon">
+                  <use href="./assets/icons/symbol-defs.svg#icon-phone"></use>
+                </svg>
+                <a href="tel:+380123456789">+380123456789</a>
+              </div>
+              <div class="modal-content__our-contacts--info-wrapper">
+                <svg class="modal-content__our-contacts--icon">
+                  <use href="./assets/icons/symbol-defs.svg#icon-envelop"></use>
+                </svg>
+                <a href="mailto:info@example.com">mailto:info@example.com</a>
+              </div>
+            </div>
+            <div class="modal-content__social-wrapper">
+              <h3 class="modal-content__social-title">Connect with me:</h3>
+              <ul class="modal-content__social-item">
+                <li>
+                  <a href="#">
+                    <svg class="modal-content__our-contacts--icon">
+                      <use href="./assets/icons/symbol-defs.svg#icon-facebook-1"></use>
+                    </svg>
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+                    <svg class="modal-content__our-contacts--icon">
+                      <use href="./assets/icons/symbol-defs.svg#icon-linkedin-1"></use>
+                    </svg>
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+                    <svg class="modal-content__our-contacts--icon">
+                      <use href="./assets/icons/symbol-defs.svg#icon-google-1"></use>
+                    </svg>
+                  </a>
+                </li>
+              </ul>
+            </div>
+            <address>
+              <h3 class="modal-content__social-title modal-content__address-title">Our address</h3>
+              <a class="modal-content__address" href="https://maps.app.goo.gl/ttL4CMoHSgroCKrX7" target="_blank"
+                >MP33+GHJ, Area Hutan Dan Kebun, Karanggandu, Kec. Watulimo, Kabupaten Trenggalek, Jawa Timur 66382,
+                Indonesia</a
+              >
+            </address>
+          </div>
+          <div class="modal__form">
+            <svg class="close-modal">
+              <use href="./assets/icons/symbol-defs.svg#icon-cross"></use>
+            </svg>
+            <h2 class="modal__form-titl modal__title-main">Contact with us</h2>
 
-    <div class="modal" id="contactModal">
-      <div class="modal-content">
-        <span class="close-modal">&times;</span>
-        <h2 class="modal-title">Контактна форма</h2>
-        <form>
-          <label for="name">Ім'я</label>
-          <input type="text" id="name" name="name" required />
+            <label for="name">Name</label>
+            <input type="text" id="name" name="name" placeholder="enter your name" required />
 
-          <label for="phone">Телефон</label>
-          <input type="tel" id="phone" name="phone" required />
+            <label for="phone">Phone</label>
+            <input type="tel" id="phone" name="phone" placeholder="enter your phone numbers" required />
 
-          <label for="email">E-mail</label>
-          <input type="email" id="email" name="email" required />
+            <label for="email">E-mail</label>
+            <input type="email" id="email" name="email" placeholder="enter your E-mail" required />
 
-          <label for="message">Коментар</label>
-          <textarea id="message" name="message" rows="4" required></textarea>
+            <label for="message">Message</label>
+            <textarea
+              id="message"
+              name="message"
+              rows="20"
+              placeholder="write your wishes and suggestions"
+              required
+            ></textarea>
 
-          <button type="submit-button">Надіслати</button>
-        </form>
+            <button class="modal__button button" type="submit-button button">Send</button>
+          </div>
+        </div>
       </div>
-    </div>
-
+    </main>
     <script src="./js/script_navbar.js" defer></script>
     <script src="./js/script_button.js" defer></script>
     <script src="./js/script_open-modal.js" defer></script>
