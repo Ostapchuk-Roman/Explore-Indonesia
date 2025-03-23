@@ -30,4 +30,9 @@ document.addEventListener('DOMContentLoaded', function () {
       }, 500);
     }
   });
+  form.addEventListener('submit', function (event) {
+    if (!form.checkValidity()) {
+      event.preventDefault(); // Блокує надсилання, якщо є помилки
+    }
+  });
 });

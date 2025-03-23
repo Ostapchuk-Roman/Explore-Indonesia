@@ -1664,56 +1664,83 @@ p {
   z-index: 10000;
 }
 .modal__title-main {
+  margin: 40px auto 40px auto;
   font-size: 42px;
   line-height: 1.5;
   color: #ffffff;
 }
-.modal__form {
-  width: 100%;
+@media screen and (max-width: 1280px) {
+  .modal__title-main {
+    font-size: 32px;
+    line-height: 1.2;
+    color: #ffffff;
+  }
 }
-.modal__form-titl {
-  color: #6f7787;
-}
-.modal__form-titl {
-  width: 70%;
-  margin: 0 auto;
-  padding-top: 16px;
-  border-bottom: solid 2px rgba(21, 20, 57, 0.4);
-}
-.modal__button {
-  align-items: center;
-  margin: 40px auto;
+@media screen and (max-width: 768px) {
+  .modal__title-main {
+    font-size: 26px;
+    line-height: 1.1;
+    color: #ffffff;
+    margin: 20px auto 20px auto;
+  }
 }
 
-/* Коли вікно активне */
 .modal.show {
   opacity: 1;
 }
 
-/* Контент форми */
 .modal-content {
   display: flex;
   background: rgba(255, 255, 255, 0.8);
   border-radius: 10px;
-  width: calc(100% - 600px);
-  height: calc(100% - 60px);
+  width: 900px;
+  height: calc(100% - 40px);
+  max-height: 720px;
   text-align: center;
   position: relative;
 }
+@media screen and (max-width: 1280px) {
+  .modal-content {
+    width: 700px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .modal-content {
+    flex-direction: column;
+    width: calc(100% - 60px);
+  }
+}
+@media screen and (max-width: 360px) {
+  .modal-content {
+    width: calc(100% - 40px);
+  }
+}
 .modal-content__our-contacts {
-  width: 650px;
+  width: 550px;
   height: 100%;
   background-color: rgba(21, 20, 57, 0.4);
   border-top-left-radius: 10px;
   border-bottom-left-radius: 10px;
 }
+@media screen and (max-width: 768px) {
+  .modal-content__our-contacts {
+    width: 100%;
+    height: auto;
+    border-bottom-left-radius: 0;
+    border-top-right-radius: 10px;
+  }
+}
 .modal-content__our-contacts--title {
   width: 70%;
-  margin: 40px auto 40px auto;
   border-bottom: solid 2px rgba(21, 20, 57, 0.4);
 }
 .modal-content__our-contacts--info {
   padding: 0 20px 40px 20px;
+}
+@media screen and (max-width: 768px) {
+  .modal-content__our-contacts--info {
+    padding: 0 20px 20px 20px;
+  }
 }
 .modal-content__our-contacts--info-wrapper {
   display: flex;
@@ -1721,15 +1748,25 @@ p {
   align-items: center;
   padding: 10px 0;
 }
-.modal-content__our-contacts--info-wrapper a {
-  padding-left: 30px;
-  margin: auto 0;
-  color: rgba(255, 255, 255, 0.8);
+@media screen and (max-width: 768px) {
+  .modal-content__our-contacts--info-wrapper {
+    padding: 5px 0;
+  }
 }
 .modal-content__our-contacts--icon {
   width: 24px;
   height: 24px;
   fill: rgba(21, 20, 57, 0.4);
+}
+.modal-content__our-contacts--info-wrapper a {
+  padding-left: 30px;
+  margin: auto 0;
+  color: rgba(255, 255, 255, 0.8);
+}
+@media screen and (max-width: 360px) {
+  .modal-content__our-contacts--info-wrapper a {
+    padding-left: 15px;
+  }
 }
 .modal-content__social-title {
   width: 70%;
@@ -1739,14 +1776,59 @@ p {
   color: #ffffff;
   border-bottom: solid 2px rgba(21, 20, 57, 0.4);
 }
+@media screen and (max-width: 768px) {
+  .modal-content__social-title--none {
+    display: none;
+  }
+}
 .modal-content__address-title {
   font-style: normal;
+}
+@media screen and (max-width: 768px) {
+  .modal-content__address-title {
+    display: none;
+  }
 }
 .modal-content__address {
   display: block;
   margin: 0 auto;
   width: 70%;
   color: rgba(255, 255, 255, 0.8);
+}
+@media screen and (max-width: 768px) {
+  .modal-content__address {
+    display: none;
+  }
+}
+
+.modal__form {
+  width: 600px;
+}
+@media screen and (max-width: 768px) {
+  .modal__form {
+    width: 100%;
+  }
+}
+.modal__form-titl {
+  width: 70%;
+  margin: 0 auto;
+  padding-top: 16px;
+  border-bottom: solid 2px rgba(21, 20, 57, 0.4);
+  color: #6f7787;
+}
+@media screen and (max-width: 768px) {
+  .modal__form-titl {
+    padding-top: 0;
+  }
+}
+.modal__button {
+  align-items: center;
+  margin: 30px auto;
+}
+@media screen and (max-width: 768px) {
+  .modal__button {
+    margin: 15px auto;
+  }
 }
 
 .modal-content__social-item {
@@ -1755,6 +1837,11 @@ p {
   gap: 30px;
   align-items: center;
   margin-bottom: 40px;
+}
+@media screen and (max-width: 768px) {
+  .modal-content__social-item {
+    margin-bottom: 20px;
+  }
 }
 
 .close-modal {
@@ -1766,39 +1853,151 @@ p {
   height: 24px;
   fill: #dd2242;
   margin: 0 0 0 auto;
+  cursor: pointer;
+}
+@media screen and (max-width: 768px) {
+  .close-modal {
+    padding-top: 0;
+    border-bottom: none;
+    left: -10px;
+    top: -200px;
+    width: 18px;
+    height: 18px;
+  }
 }
 
 label {
   display: block;
-  margin-left: 50px;
+  margin-left: 85px;
   text-align: left;
   padding: 30px 0 0;
   font-size: 18px;
   line-height: 1.55;
   color: rgba(21, 20, 57, 0.4);
 }
+@media screen and (max-width: 1280px) {
+  label {
+    margin-left: 32px;
+  }
+}
+@media screen and (max-width: 768px) {
+  label {
+    padding: 10px 0 0;
+    text-align: center;
+    margin-left: 0;
+  }
+}
 
 input,
 textarea {
   width: 300px;
-  height: 40px;
-  padding: 10px;
+  padding: 5px;
   border: solid 1px rgba(21, 20, 57, 0.4);
   border-radius: 10px;
   background-color: #e0e0e0;
 }
+@media screen and (max-width: 768px) {
+  input,
+  textarea {
+    width: 260px;
+  }
+}
+@media screen and (max-width: 360px) {
+  input,
+  textarea {
+    width: 240px;
+  }
+}
 
 textarea {
-  height: 10%;
+  height: 80px;
+}
+
+input:valid,
+textarea:valid {
+  background-color: #ffffff; /* Світло-зелений (коректно заповнене поле) */
+  border: 2px solid #6f7787;
 }
 
 input:invalid,
 textarea:invalid {
+  background-color: #e0e0e0; /* Світло-червоний (некоректне поле) */
   border: 2px solid #dd2242;
-  background-color: rgba(255, 0, 0, 0.1);
 }
 
-input:focus:invalid,
-textarea:focus:invalid {
-  outline: 2px solid #dd2242;
+.animation-opacity-scale {
+  opacity: 0;
+  transform: scale(0.8);
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.animation-opacity-scale.active {
+  opacity: 1;
+  transform: scale(1);
+}
+
+@keyframes animation-opacity-scale {
+  from {
+    opacity: 0;
+    transform: scale(0.8);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+.animation-movement-right {
+  opacity: 0;
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.animation-movement-right.active {
+  animation: animation-movement-right 0.8s ease-out forwards;
+}
+
+@keyframes animation-movement-right {
+  from {
+    opacity: 0;
+    transform: translateX(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+.animation-movement-left {
+  opacity: 0;
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.animation-movement-left.active {
+  animation: animation-movement-left 0.8s ease-out forwards;
+}
+
+@keyframes animation-movement-left {
+  from {
+    opacity: 0;
+    transform: translateX(-50px); /* Початкове зміщення вправо */
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0); /* Рух до нормальної позиції */
+  }
+}
+.animation-opacity {
+  opacity: 0;
+  transition: opacity 0.8s ease-out;
+}
+
+.animation-opacity.active {
+  animation: animation-opacity 0.8s ease-out forwards;
+}
+
+@keyframes animation-opacity {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }/*# sourceMappingURL=main.css.map */

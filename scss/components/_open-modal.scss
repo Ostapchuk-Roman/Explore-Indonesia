@@ -18,70 +18,77 @@
   z-index: 10000;
 
   &__title-main {
+    margin: 40px auto 40px auto;
     @include text-style($fs-d-h3, 1.5, $primary-lighter-color);
-  }
 
-  &__form {
-    width: 100%;
-  }
-  &__form-titl {
-    color: $secondary-darker-color;
-  }
-
-  &__form-titl {
-    width: 70%;
-    margin: 0 auto;
-    padding-top: 16px;
-    border-bottom: solid 2px $secondary-transparency-color;
-  }
-  &__button {
-    align-items: center;
-    margin: 40px auto;
+    @media screen and (max-width: $mw-desctop-d) {
+      @include text-style($fs-t-h3, 1.2, $primary-lighter-color);
+    }
+    @media screen and (max-width: $mw-tablet-d) {
+      @include text-style($fs-d-h4, 1.1, $primary-lighter-color);
+      margin: 20px auto 20px auto;
+    }
   }
 }
 
-/* Коли вікно активне */
 .modal.show {
   opacity: 1;
 }
 
-/* Контент форми */
 .modal-content {
   display: flex;
   background: $primary-transparency-color;
   border-radius: 10px;
-  width: calc(100% - 600px);
-  height: calc(100% - 60px);
+  width: 900px;
+  height: calc(100% - 40px);
+  max-height: 720px;
   text-align: center;
   position: relative;
 
+  @media screen and (max-width: $mw-desctop-d) {
+    width: 700px;
+  }
+  @media screen and (max-width: $mw-tablet-d) {
+    flex-direction: column;
+    width: calc(100% - 60px);
+  }
+  @media screen and (max-width: $mw-mobil-d) {
+    width: calc(100% - 40px);
+  }
+
   &__our-contacts {
-    width: 650px;
+    width: 550px;
     height: 100%;
     background-color: $secondary-transparency-color;
     border-top-left-radius: 10px;
     border-bottom-left-radius: 10px;
 
+    @media screen and (max-width: $mw-tablet-d) {
+      width: 100%;
+      height: auto;
+      border-bottom-left-radius: 0;
+      border-top-right-radius: 10px;
+    }
+
     &--title {
       width: 70%;
-      margin: 40px auto 40px auto;
       border-bottom: solid 2px $secondary-transparency-color;
     }
 
     &--info {
       padding: 0 20px 40px 20px;
+      @media screen and (max-width: $mw-tablet-d) {
+        padding: 0 20px 20px 20px;
+      }
     }
     &--info-wrapper {
       display: flex;
       justify-content: center;
       align-items: center;
       padding: 10px 0;
-    }
-
-    &--info-wrapper a {
-      padding-left: 30px;
-      margin: auto 0;
-      color: $primary-transparency-color;
+      @media screen and (max-width: $mw-tablet-d) {
+        padding: 5px 0;
+      }
     }
 
     &--icon {
@@ -89,16 +96,35 @@
       height: 24px;
       fill: $secondary-transparency-color;
     }
+
+    &--info-wrapper a {
+      padding-left: 30px;
+      margin: auto 0;
+      color: $primary-transparency-color;
+
+      @media screen and (max-width: $mw-mobil-d) {
+        padding-left: 15px;
+      }
+    }
   }
   &__social-title {
     width: 70%;
     margin: 0 auto 40px auto;
     @include text-style($fs-d-h4, 1.5, $primary-lighter-color);
     border-bottom: solid 2px $secondary-transparency-color;
+
+    &--none {
+      @media screen and (max-width: $mw-tablet-d) {
+        display: none;
+      }
+    }
   }
 
   &__address-title {
     font-style: normal;
+    @media screen and (max-width: $mw-tablet-d) {
+      display: none;
+    }
   }
 
   &__address {
@@ -106,6 +132,37 @@
     margin: 0 auto;
     width: 70%;
     color: $primary-transparency-color;
+    @media screen and (max-width: $mw-tablet-d) {
+      display: none;
+    }
+  }
+}
+
+.modal {
+  &__form {
+    width: 600px;
+    @media screen and (max-width: $mw-tablet-d) {
+      width: 100%;
+    }
+  }
+
+  &__form-titl {
+    width: 70%;
+    margin: 0 auto;
+    padding-top: 16px;
+    border-bottom: solid 2px $secondary-transparency-color;
+    color: $secondary-darker-color;
+
+    @media screen and (max-width: $mw-tablet-d) {
+      padding-top: 0;
+    }
+  }
+  &__button {
+    align-items: center;
+    margin: 30px auto;
+    @media screen and (max-width: $mw-tablet-d) {
+      margin: 15px auto;
+    }
   }
 }
 
@@ -115,6 +172,10 @@
   gap: 30px;
   align-items: center;
   margin-bottom: 40px;
+
+  @media screen and (max-width: $mw-tablet-d) {
+    margin-bottom: 20px;
+  }
 }
 
 .close-modal {
@@ -126,35 +187,60 @@
   height: 24px;
   fill: $accent-color;
   margin: 0 0 0 auto;
+  cursor: pointer;
+
+  @media screen and (max-width: $mw-tablet-d) {
+    padding-top: 0;
+    border-bottom: none;
+    left: -10px;
+    top: -200px;
+    width: 18px;
+    height: 18px;
+  }
 }
 
 label {
   display: block;
-  margin-left: 50px;
+  margin-left: 85px;
   text-align: left;
   padding: 30px 0 0;
+
   @include text-style($fs-p, 1.55, $secondary-transparency-color);
+  @media screen and (max-width: $mw-desctop-d) {
+    margin-left: 32px;
+  }
+  @media screen and (max-width: $mw-tablet-d) {
+    padding: 10px 0 0;
+    text-align: center;
+    margin-left: 0;
+  }
 }
 input,
 textarea {
   width: 300px;
-  height: 40px;
-  padding: 10px;
+  padding: 5px;
   border: solid 1px $secondary-transparency-color;
   border-radius: 10px;
   background-color: $secondary-lighter-color;
+  @media screen and (max-width: $mw-tablet-d) {
+    width: 260px;
+  }
+  @media screen and (max-width: $mw-mobil-d) {
+    width: 240px;
+  }
 }
 textarea {
-  height: 10%;
+  height: 80px;
+}
+
+input:valid,
+textarea:valid {
+  background-color: $primary-lighter-color; /* Світло-зелений (коректно заповнене поле) */
+  border: 2px solid $secondary-darker-color;
 }
 
 input:invalid,
 textarea:invalid {
+  background-color: $secondary-lighter-color; /* Світло-червоний (некоректне поле) */
   border: 2px solid $accent-color;
-  background-color: rgba(255, 0, 0, 0.1);
-}
-
-input:focus:invalid,
-textarea:focus:invalid {
-  outline: 2px solid $accent-color;
 }

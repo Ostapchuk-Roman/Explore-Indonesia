@@ -47,8 +47,8 @@
     </header>
     <main>
       <section class="hero-section">
-        <h1 class="hero-section__title">explore indonesia</h1>
-        <button class="hero-section__button button open-modal" type="button">Start travelling</button>
+        <h1 class="hero-section__title animation-opacity-scale">explore indonesia</h1>
+        <button class="hero-section__button button open-modal animation-opacity" type="button">Start travelling</button>
       </section>
       <section class="trip-section">
         <ol class="trip-section__list">
@@ -74,7 +74,7 @@
         </div>
       </section>
       <section class="walkways-section" id="walkways-section">
-        <div class="walkways-section__wrapper-img">
+        <div class="walkways-section__wrapper-img animation-movement-left">
           <img
             class="walkways-section__photo"
             src="./assets/images/walkways_indonesia.jpg"
@@ -82,18 +82,18 @@
           />
         </div>
         <div class="walkways-section__wrapper">
-          <h3 class="walkways-section__title">The walkways of Indonesia spellbind</h3>
+          <h3 class="walkways-section__title animation-movement-right">The walkways of Indonesia spellbind</h3>
           <p>Lorem ipsum dolor sit amet, consectetur adip iscing elit. Fusce commodo magna et libero mollis rhoncus.</p>
           <button class="walkways-section__button button open-modal" type="button">Learn More</button>
         </div>
       </section>
       <section class="beaches-section">
         <div class="beaches-section__wrapper">
-          <h3 class="beaches-section__title">Perfect beaches exude relaxation and fun</h3>
+          <h3 class="beaches-section__title animation-movement-left">Perfect beaches exude relaxation and fun</h3>
           <p>Lorem ipsum dolor sit amet, consectetur adip iscing elit. Fusce commodo magna et libero mollis rhoncus.</p>
           <button class="beaches-section__button button open-modal" type="button">Learn More</button>
         </div>
-        <div class="beaches-section__wrapper-img">
+        <div class="beaches-section__wrapper-img animation-movement-right">
           <img
             class="beaches-section__photo"
             src="./assets/images/beaches_indonesia.jpg"
@@ -102,7 +102,7 @@
         </div>
       </section>
       <section class="secrets-section" id="secrets-section">
-        <h2 class="secrets-section__title">Explore Our Secrets</h2>
+        <h2 class="secrets-section__title animation-opacity-scale">Explore Our Secrets</h2>
         <div class="secrets-section__wrapper--swiper">
           <div class="secrets-section__button secrets-section__button--wrapper-prev">
             <button type="button">
@@ -132,7 +132,7 @@
         <div class="secrets-section__swiper-pagination"></div>
         <article class="secrets-section__statistics">
           <div class="secrets-section__statistics--title">
-            <h3>By The Numbers</h3>
+            <h3 class="animation-opacity-scale">By The Numbers</h3>
             <p>
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce commodo magna et libero.Lorem ipsum dolor
               sit amet, consectetur adipiscing elit.
@@ -155,7 +155,9 @@
         </article>
       </section>
       <section class="relief-section">
-        <h2 class="relief-section__title">Our hills and valleys are like nothing you’ve seen.</h2>
+        <h2 class="relief-section__title animation-opacity-scale">
+          Our hills and valleys are like nothing you’ve seen.
+        </h2>
         <p>
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce sit amet magna commodo, tempus dolor sit amet,
           laoreet elit. Donec mauris tortor.
@@ -191,7 +193,7 @@
         </div>
       </section>
       <section class="gallery-section" id="gallery-section">
-        <h2>Photo Gallery</h2>
+        <h2 class="animation-opacity-scale">Photo Gallery</h2>
         <p>
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus dapibus mauris in lectus tempus, eget
           tincidunt.
@@ -365,7 +367,7 @@
               </div>
             </div>
             <div class="modal-content__social-wrapper">
-              <h3 class="modal-content__social-title">Connect with me:</h3>
+              <h3 class="modal-content__social-title modal-content__social-title--none">Connect with me:</h3>
               <ul class="modal-content__social-item">
                 <li>
                   <a href="#">
@@ -403,35 +405,44 @@
               <use href="./assets/icons/symbol-defs.svg#icon-cross"></use>
             </svg>
             <h2 class="modal__form-titl modal__title-main">Contact with us</h2>
+            <form id="contactForm">
+              <label for="name">Name</label>
+              <input type="text" id="name" name="name" placeholder="enter your name" required />
 
-            <label for="name">Name</label>
-            <input type="text" id="name" name="name" placeholder="enter your name" required />
+              <label for="phone">Phone</label>
+              <input
+                type="tel"
+                pattern="\+?[0-9\s\-]{10,17}"
+                id="phone"
+                name="phone"
+                placeholder="enter your phone numbers"
+                required
+              />
 
-            <label for="phone">Phone</label>
-            <input type="tel" id="phone" name="phone" placeholder="enter your phone numbers" required />
+              <label for="email">E-mail</label>
+              <input type="email" id="email" name="email" placeholder="enter your E-mail" required />
 
-            <label for="email">E-mail</label>
-            <input type="email" id="email" name="email" placeholder="enter your E-mail" required />
+              <label for="message">Message</label>
+              <textarea
+                id="message"
+                name="message"
+                rows="20"
+                placeholder="write your wishes and suggestions"
+              ></textarea>
 
-            <label for="message">Message</label>
-            <textarea
-              id="message"
-              name="message"
-              rows="20"
-              placeholder="write your wishes and suggestions"
-              required
-            ></textarea>
-
-            <button class="modal__button button" type="submit-button button">Send</button>
+              <button class="modal__button button" type="submit">Send</button>
+            </form>
           </div>
         </div>
       </div>
     </main>
+
     <script src="./js/script_navbar.js" defer></script>
     <script src="./js/script_button.js" defer></script>
     <script src="./js/script_open-modal.js" defer></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js" defer></script>
     <script src="./js/script_swiper.js" defer></script>
     <script src="./js/button_show_more.js" defer></script>
+    <script src="./js/script_animations.js" defer></script>
   </body>
 </html>

@@ -1,0 +1,80 @@
+.animation-opacity-scale {
+  opacity: 0;
+  transform: scale(0.8);
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.animation-opacity-scale.active {
+  opacity: 1;
+  transform: scale(1);
+}
+@keyframes animation-opacity-scale {
+  from {
+    opacity: 0;
+    transform: scale(0.8);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+// _____________________________________________
+
+.animation-movement-right {
+  opacity: 0;
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.animation-movement-right.active {
+  animation: animation-movement-right 0.8s ease-out forwards;
+}
+
+@keyframes animation-movement-right {
+  from {
+    opacity: 0;
+    transform: translateX(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+// _____________________________________________
+
+.animation-movement-left {
+  opacity: 0;
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.animation-movement-left.active {
+  animation: animation-movement-left 0.8s ease-out forwards;
+}
+
+@keyframes animation-movement-left {
+  from {
+    opacity: 0;
+    transform: translateX(-50px); /* Початкове зміщення вправо */
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0); /* Рух до нормальної позиції */
+  }
+}
+// _____________________________________________
+.animation-opacity {
+  opacity: 0;
+  transition: opacity 0.8s ease-out;
+}
+
+.animation-opacity.active {
+  animation: animation-opacity 0.8s ease-out forwards;
+}
+@keyframes animation-opacity {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
