@@ -64,7 +64,7 @@
 // _____________________________________________
 .animation-opacity {
   opacity: 0;
-  transition: opacity 0.8s ease-out;
+  transition: opacity 1.2s ease-out;
 }
 
 .animation-opacity.active {
@@ -78,3 +78,5 @@
     opacity: 1;
   }
 }
+
+// _____________________________________________

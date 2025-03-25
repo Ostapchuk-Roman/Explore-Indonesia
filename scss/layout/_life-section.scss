@@ -7,6 +7,7 @@
   background-position: center top;
   background-repeat: no-repeat;
   background-size: cover;
+  background-attachment: fixed;
 
   @media screen and (max-width: $mw-mobil-d) {
     background-position: left -900px top;

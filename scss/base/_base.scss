@@ -14,13 +14,14 @@ body {
   background-repeat: no-repeat;
   background-position: center, top;
   background-size: 1920px;
+  background-attachment: fixed;
 
   @media screen and (max-width: $mw-desctop-d) {
     background-size: 1920px;
   }
 
   @media screen and (max-width: $mw-tablet-d) {
-    background-size: 2520px;
+    background-size: 2420px;
   }
 }
 

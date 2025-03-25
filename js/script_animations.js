@@ -15,7 +15,7 @@ document.addEventListener('DOMContentLoaded', function () {
         }
       });
     },
-    { threshold: 0.2 },
+    { threshold: 0.1 },
   );
 
   // Спостереження за кожним елементом
