@@ -618,7 +618,7 @@ p {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-image: linear-gradient(to bottom, rgb(1, 10, 32), rgba(1, 10, 32, 0.8)), url(../../assets/images/beaches_indonesia_background.jpg);
+  background-image: linear-gradient(to bottom, rgb(1, 10, 32), rgba(1, 10, 32, 0.8)), url(./assets/images/beaches_indonesia_background.jpg);
   background-repeat: no-repeat;
   background-position: center;
   background-size: 100%;
