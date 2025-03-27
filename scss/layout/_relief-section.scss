@@ -4,8 +4,7 @@
 .relief-section {
   height: 821px;
   background-color: $primary-lighter-color;
-  background-image: url(../../assets/images/relief_background_left.png),
-    url(../../assets/images/relief_background_right.png);
+  background-image: url(../assets/images/relief_background_left.png), url(../assets/images/relief_background_right.png);
   background-position: left top, right bottom;
   background-repeat: no-repeat;
   background-size: 35%, 50%;
@@ -18,8 +17,8 @@
   }
   @media screen and (max-width: $mw-mobil-d) {
     height: 761px;
-    background-image: url(../../assets/images/relief_background_left_rotate.png),
-      url(../../assets/images/relief_background_right_360.png);
+    background-image: url(../assets/images/relief_background_left_rotate.png),
+      url(../assets/images/relief_background_right_360.png);
     background-size: 100%, 100%;
     background-position: left top, right bottom;
   }
